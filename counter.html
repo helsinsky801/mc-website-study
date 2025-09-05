@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شمارنده آیتم‌ها</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .counter-container {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .counter-display {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #64b5f6;
+            margin: 30px 0;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            background: linear-gradient(135deg, #64b5f6 0%, #1976d2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .counter-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .counter-btn {
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+            min-width: 120px;
+        }
+
+        .counter-btn:hover {
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(25, 118, 210, 0.6);
+        }
+
+        .counter-btn.decrement {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+        }
+
+        .counter-btn.decrement:hover {
+            background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+            box-shadow: 0 8px 28px rgba(255, 107, 107, 0.6);
+        }
+
+        .counter-btn.reset {
+            background: linear-gradient(135deg, #ffa726 0%, #fb8c00 100%);
+        }
+
+        .counter-btn.reset:hover {
+            background: linear-gradient(135deg, #fb8c00 0%, #f57c00 100%);
+            box-shadow: 0 8px 28px rgba(255, 152, 38, 0.6);
+        }
+
+        .counter-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.05);
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .control-label {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            font-weight: 500;
+        }
+
+        .step-input {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #e0e0e0;
+            padding: 8px 12px;
+            border-radius: 8px;
+            width: 80px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .step-input:focus {
+            outline: none;
+            border-color: #64b5f6;
+            box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #b0b0b0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 107, 107, 0.2);
+            border-color: #ff6b6b;
+            color: #ff6b6b;
+        }
+
+        .counter-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #64b5f6;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #b0b0b0;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .counter-container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            .counter-display {
+                font-size: 3rem;
+            }
+
+            .counter-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .counter-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .control-group {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .counter-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <button class="close-btn" onclick="closeCounter()">بستن</button>
+
+        <h1 style="color: #64b5f6; margin-bottom: 10px; font-size: 2rem;">شمارنده آیتم‌ها</h1>
+        <p style="color: #b0b0b0; margin-bottom: 30px;">از دکمه‌ها برای شمارش استفاده کنید</p>
+
+        <div class="counter-display" id="counterDisplay">0</div>
+
+        <div class="counter-buttons">
+            <button class="counter-btn decrement" onclick="decrement()">کاهش</button>
+            <button class="counter-btn reset" onclick="resetCounter()">بازنشانی</button>
+            <button class="counter-btn" onclick="increment()">افزایش</button>
+        </div>
+
+        <div class="counter-controls">
+            <div class="control-group">
+                <label class="control-label">گام شمارش:</label>
+                <input type="number" class="step-input" id="stepInput" value="1" min="1" max="100">
+            </div>
+        </div>
+
+        <div class="counter-stats">
+            <div class="stat-item">
+                <span class="stat-number" id="totalClicks">0</span>
+                <div class="stat-label">کل کلیک‌ها</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="sessionTime">0</span>
+                <div class="stat-label">زمان جلسه (ثانیه)</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let counter = 0;
+        let totalClicks = 0;
+        let sessionStart = Date.now();
+        let step = 1;
+
+        // Load saved counter value
+        window.onload = function() {
+            const savedCounter = localStorage.getItem('counterValue');
+            const savedClicks = localStorage.getItem('totalClicks');
+
+            if (savedCounter) {
+                counter = parseInt(savedCounter);
+                updateDisplay();
+            }
+
+            if (savedClicks) {
+                totalClicks = parseInt(savedClicks);
+                updateStats();
+            }
+
+            // Update step from input
+            document.getElementById('stepInput').addEventListener('change', function() {
+                step = parseInt(this.value) || 1;
+                if (step < 1) step = 1;
+                if (step > 100) step = 100;
+                this.value = step;
+            });
+
+        // Update session time with more accurate timing
+        let lastUpdate = Date.now();
+        function updateSessionTimeAccurate() {
+            const now = Date.now();
+            if (now - lastUpdate >= 1000) {
+                const elapsed = Math.floor((now - sessionStart) / 1000);
+                document.getElementById('sessionTime').textContent = elapsed;
+                lastUpdate = now;
+            }
+            requestAnimationFrame(updateSessionTimeAccurate);
+        }
+        updateSessionTimeAccurate();
+        };
+
+        function increment() {
+            counter += step;
+            totalClicks++;
+            updateDisplay();
+            updateStats();
+            saveData();
+        }
+
+        function decrement() {
+            counter -= step;
+            totalClicks++;
+            updateDisplay();
+            updateStats();
+            saveData();
+        }
+
+        function resetCounter() {
+            if (confirm('آیا مطمئن هستید که می‌خواهید شمارنده را بازنشانی کنید؟')) {
+                counter = 0;
+                updateDisplay();
+                saveData();
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('counterDisplay').textContent = counter;
+        }
+
+        function updateStats() {
+            document.getElementById('totalClicks').textContent = totalClicks;
+        }
+
+
+
+        function saveData() {
+            localStorage.setItem('counterValue', counter);
+            localStorage.setItem('totalClicks', totalClicks);
+        }
+
+        function closeCounter() {
+            // Send counter value back to parent window
+            if (window.opener && !window.opener.closed) {
+                window.opener.postMessage({
+                    type: 'counterUpdate',
+                    value: counter,
+                    totalClicks: totalClicks
+                }, '*');
+            }
+            window.close();
+        }
+
+        // Listen for messages from parent window
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'getCounterValue') {
+                // Send current counter value back
+                event.source.postMessage({
+                    type: 'counterResponse',
+                    value: counter,
+                    totalClicks: totalClicks
+                }, '*');
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            switch(event.key) {
+                case '+':
+                case '=':
+                    event.preventDefault();
+                    increment();
+                    break;
+                case '-':
+                    event.preventDefault();
+                    decrement();
+                    break;
+                case 'r':
+                case 'R':
+                    if (event.ctrlKey || event.metaKey) {
+                        event.preventDefault();
+                        resetCounter();
+                    }
+                    break;
+                case 'Escape':
+                    closeCounter();
+                    break;
+            }
+        });
+
+        // Prevent accidental closure
+        window.addEventListener('beforeunload', function(event) {
+            saveData();
+        });
+    </script>
+</body>
+</html>

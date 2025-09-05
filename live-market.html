@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Market Dashboard - MKG Capital Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="learning-styles.css" />
+  <link rel="stylesheet" href="layout-styles.css" />
+  </head>
+  <body class="belajar-page">
+
+  <header>
+    <div class="container">
+      <h1 class="holographic-text">MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none !important;">
+          <button class="nav-btn" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn" data-page="belajar-1.html">Materi Pembelajaran</button>
+          <button class="nav-btn" data-page="quiz-1.html">Quiz</button>
+          <button class="nav-btn" data-page="live-market.html">Live Market</button>
+          <button class="nav-btn" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Market Hero Section -->
+  <section class="learning-hero market-hero-enhanced interactive-bg">
+    <div class="container">
+      <div class="learning-hero-content hero-content-enhanced floating-3d">
+        <h1 class="learning-title hero-title-glow holographic-text animate-typing">Live Market Dashboard</h1>
+        <p class="learning-subtitle hero-subtitle-neon animate-neonPulse">Pantau Pergerakan Pasar Real-Time</p>
+        <p class="learning-description hero-description-animated animate-fadeIn">
+          Akses data pasar langsung dari berbagai indeks global dan mata uang. Dapatkan informasi terkini untuk mendukung keputusan trading Anda.
+        </p>
+        <div class="hero-particles-enhanced interactive-particles">
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+          <div class="particle particle-5"></div>
+        </div>
+      </div>
+      <div class="hero-background-effects morphing-shapes">
+        <div class="floating-shapes">
+          <div class="shape shape-1">📈</div>
+          <div class="shape shape-2">💹</div>
+          <div class="shape shape-3">📊</div>
+          <div class="shape shape-4">💰</div>
+          <div class="shape shape-5">📉</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Market Stats -->
+    <div class="market-stats-grid">
+      <div class="market-stat-card stat-card-1 interactive-card pulse-animation">
+        <div class="stat-card-glow"></div>
+        <div class="stat-card-content">
+          <div class="stat-value animated-counter" id="market-status">🟢 Open</div>
+          <div class="stat-label">Status Pasar</div>
+          <div class="stat-icon">⚡</div>
+        </div>
+      </div>
+      <div class="market-stat-card stat-card-2 interactive-card pulse-animation">
+        <div class="stat-card-glow"></div>
+        <div class="stat-card-content">
+          <div class="stat-value animated-counter" id="active-traders">1,247</div>
+          <div class="stat-label">Trader Aktif</div>
+          <div class="stat-icon">👥</div>
+        </div>
+      </div>
+      <div class="market-stat-card stat-card-3 interactive-card pulse-animation">
+        <div class="stat-card-glow"></div>
+        <div class="stat-card-content">
+          <div class="stat-value animated-counter" id="total-volume">$2.4T</div>
+          <div class="stat-label">Volume Harian</div>
+          <div class="stat-icon">💰</div>
+        </div>
+      </div>
+      <div class="market-stat-card stat-card-4 interactive-card pulse-animation">
+        <div class="stat-card-glow"></div>
+        <div class="stat-card-content">
+          <div class="stat-value animated-counter" id="market-trend">📈 Bullish</div>
+          <div class="stat-label">Trend Pasar</div>
+          <div class="stat-icon">📊</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Overview -->
+    <div class="content-section">
+      <span class="section-icon">📊</span>
+      <h2 class="section-title">Market Overview</h2>
+      <div class="section-content">
+        <div style="background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color: #64b5f6; text-align: center; margin-bottom: 20px;">Indeks Utama</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #b0b0b0;">S&P 500</span>
+                <span style="color: #4caf50; font-weight: 700;">+0.85%</span>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: #64b5f6; margin-top: 5px;">4,567.89</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #b0b0b0;">Dow Jones</span>
+                <span style="color: #f44336; font-weight: 700;">-0.23%</span>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: #64b5f6; margin-top: 5px;">34,567.89</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #b0b0b0;">Nasdaq</span>
+                <span style="color: #4caf50; font-weight: 700;">+1.12%</span>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: #64b5f6; margin-top: 5px;">14,567.89</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #b0b0b0;">Nikkei 225</span>
+                <span style="color: #4caf50; font-weight: 700;">+0.67%</span>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: #64b5f6; margin-top: 5px;">28,567.89</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Layout Selector -->
+  <div class="layout-selector">
+    <h3 class="layout-selector-title holographic-text">🎨 Pilih Tata Letak Dashboard</h3>
+    <div class="layout-buttons">
+      <button class="layout-btn active" data-layout="grid">📊 Grid</button>
+      <button class="layout-btn" data-layout="list">📋 List</button>
+      <button class="layout-btn" data-layout="card">🃏 Card</button>
+      <button class="layout-btn" data-layout="compact">🔍 Compact</button>
+      <button class="layout-btn" data-layout="expanded">🖥️ Expanded</button>
+      <button class="layout-btn" data-layout="mixed">🔀 Mixed</button>
+    </div>
+  </div>
+
+  <!-- TradingView Widgets Section -->
+  <div class="tradingview-widgets-section-enhanced layout-grid">
+    <div class="widgets-background-effects morphing-shapes">
+      <div class="widgets-particles interactive-particles">
+        <div class="widget-particle wp-1"></div>
+        <div class="widget-particle wp-2"></div>
+        <div class="widget-particle wp-3"></div>
+        <div class="widget-particle wp-4"></div>
+      </div>
+    </div>
+
+    <!-- Main Chart Widget -->
+    <div class="tradingview-widget-container-enhanced main-chart-container interactive-card pulse-animation">
+      <div class="widget-glow-effect"></div>
+      <div class="widget-header-enhanced widget-hover-glow">
+        <h3 class="widget-title-glow holographic-text">📈 Chart Utama - Apple Inc.</h3>
+        <div class="widget-status-indicator">
+          <span class="status-dot pulse-dot"></span>
+          Live Data
+        </div>
+      </div>
+      <div class="widget-content-wrapper">
+        <div id="tradingview_main"></div>
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 500,
+          "symbol": "NASDAQ:AAPL",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "id",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_main"
+        });
+      </script>
+    </div>
+
+    <!-- Mini Charts Grid -->
+    <div class="mini-charts-grid-enhanced">
+      <div class="tradingview-widget-container-enhanced mini-chart-container interactive-card pulse-animation widget-hover-glow">
+        <div class="widget-glow-effect mini-glow"></div>
+        <div class="widget-header-mini holographic-text">
+          <h4 class="mini-widget-title">USD/JPY</h4>
+          <div class="mini-status pulse-dot">💴</div>
+        </div>
+        <div class="widget-content-wrapper">
+          <div id="tradingview_sp500"></div>
+        </div>
+        <script type="text/javascript">
+          new TradingView.widget({
+            "width": "100%",
+            "height": 300,
+            "symbol": "FX:USDJPY",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "id",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": true,
+            "container_id": "tradingview_sp500"
+          });
+        </script>
+      </div>
+
+      <div class="tradingview-widget-container-enhanced mini-chart-container interactive-card pulse-animation widget-hover-glow">
+        <div class="widget-glow-effect mini-glow"></div>
+        <div class="widget-header-mini holographic-text">
+          <h4 class="mini-widget-title">Bitcoin</h4>
+          <div class="mini-status pulse-dot">₿</div>
+        </div>
+        <div class="widget-content-wrapper">
+          <div id="tradingview_btc"></div>
+        </div>
+        <script type="text/javascript">
+          new TradingView.widget({
+            "width": "100%",
+            "height": 300,
+            "symbol": "CRYPTO:BTCUSD",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "id",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": true,
+            "container_id": "tradingview_btc"
+          });
+        </script>
+      </div>
+
+      <div class="tradingview-widget-container-enhanced mini-chart-container interactive-card pulse-animation widget-hover-glow">
+        <div class="widget-glow-effect mini-glow"></div>
+        <div class="widget-header-mini holographic-text">
+          <h4 class="mini-widget-title">EUR/USD</h4>
+          <div class="mini-status pulse-dot">💱</div>
+        </div>
+        <div class="widget-content-wrapper">
+          <div id="tradingview_eurusd"></div>
+        </div>
+        <script type="text/javascript">
+          new TradingView.widget({
+            "width": "100%",
+            "height": 300,
+            "symbol": "FX:EURUSD",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "id",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": true,
+            "container_id": "tradingview_eurusd"
+          });
+        </script>
+      </div>
+    </div>
+
+    <!-- Market Overview Widget -->
+    <div class="tradingview-widget-container-enhanced overview-container">
+      <div class="widget-glow-effect overview-glow"></div>
+      <div class="widget-header-enhanced">
+        <h3 class="widget-title-glow">🌍 Market Overview</h3>
+        <div class="widget-status-indicator">
+          <span class="status-dot"></span>
+          Global Markets
+        </div>
+      </div>
+      <div class="widget-content-wrapper">
+        <div id="tradingview_overview"></div>
+      </div>
+      <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 400,
+          "symbol": "NASDAQ:AAPL",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "id",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "withdateranges": true,
+          "hide_side_toolbar": false,
+          "allow_symbol_change": true,
+          "details": true,
+          "hotlist": true,
+          "calendar": false,
+          "container_id": "tradingview_overview"
+        });
+      </script>
+    </div>
+
+    <!-- Forex Cross Rates -->
+    <div class="tradingview-widget-container-enhanced forex-container">
+      <div class="widget-glow-effect forex-glow"></div>
+      <div class="widget-header-enhanced">
+        <h3 class="widget-title-glow">💱 Forex Cross Rates</h3>
+        <div class="widget-status-indicator">
+          <span class="status-dot"></span>
+          Currency Exchange
+        </div>
+      </div>
+      <div class="widget-content-wrapper">
+        <div id="tradingview_forex"></div>
+      </div>
+      <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 400,
+          "symbol": "FX_IDC:EURUSD",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "id",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "hide_side_toolbar": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_forex"
+        });
+      </script>
+    </div>
+
+  </div>
+  <!-- TradingView Widgets END -->
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-members">&times;</span>
+      <h3>Anggota MKG Capital Group</h3>
+      <ul>
+        <li>Awen</li>
+        <li>Yongki</li>
+        <li>Reno</li>
+        <li>Deo</li>
+        <li>Noven</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <button class="hamburger-close-btn" id="hamburger-close-btn">&times;</button>
+      <div class="hamburger-nav-buttons">
+        <button class="hamburger-nav-btn" data-page="index.html">Beranda</button>
+        <button class="hamburger-nav-btn" data-page="about.html">Tentang Kami</button>
+        <button class="hamburger-nav-btn" data-page="belajar-1.html">Materi Pembelajaran</button>
+        <button class="hamburger-nav-btn" data-page="quiz-1.html">Quiz</button>
+        <button class="hamburger-nav-btn" data-page="live-market.html">Live Market</button>
+        <button class="hamburger-nav-btn" data-page="contact.html">Kontak</button>
+        <button class="hamburger-nav-btn" id="hamburger-open-popup-members">Anggota Grup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script-updated.js"></script>
+  <script src="script.js"></script>
+  <script src="hamburger-menu-animated.js"></script>
+  <script src="page-animations.js"></script>
+
+  <!-- Simple Market Update Script -->
+  <script>
+    function updateMarketStats() {
+      const tradersElement = document.getElementById('active-traders');
+      const volumeElement = document.getElementById('total-volume');
+      const trendElement = document.getElementById('market-trend');
+
+      const baseTraders = 1200;
+      const fluctuation = Math.floor(Math.random() * 200) - 100;
+      tradersElement.textContent = (baseTraders + fluctuation).toLocaleString();
+
+      const baseVolume = 2.4;
+      const volumeFluctuation = (Math.random() * 0.5) - 0.25;
+      volumeElement.textContent = '$' + (baseVolume + volumeFluctuation).toFixed(1) + 'T';
+
+      const trends = ['📈 Bullish', '📉 Bearish', '➡️ Sideways'];
+      const randomTrend = Math.floor(Math.random() * trends.length);
+      trendElement.textContent = trends[randomTrend];
+    }
+
+    setInterval(updateMarketStats, 30000);
+  </script>
+
+  <!-- Layout Switcher Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const layoutButtons = document.querySelectorAll('.layout-btn');
+        const widgetsSection = document.querySelector('.tradingview-widgets-section-enhanced');
+
+        // Load saved layout from localStorage or default to 'grid'
+        const savedLayout = localStorage.getItem('selectedLayout') || 'grid';
+
+        // Apply saved layout class
+        widgetsSection.classList.add(`layout-${savedLayout}`);
+
+        // Set active button based on saved layout
+        layoutButtons.forEach(btn => {
+          if (btn.getAttribute('data-layout') === savedLayout) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        layoutButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            layoutButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Get the layout type from data attribute
+            const layoutType = this.getAttribute('data-layout');
+
+            // Remove all layout classes
+            widgetsSection.classList.remove('layout-grid', 'layout-list', 'layout-card', 'layout-compact', 'layout-expanded', 'layout-mixed');
+
+            // Add the new layout class
+            widgetsSection.classList.add(`layout-${layoutType}`);
+
+            // Save selected layout to localStorage
+            localStorage.setItem('selectedLayout', layoutType);
+          });
+        });
+      });
+    </script>
+</body>
+</html>

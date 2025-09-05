@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak - MKG Capital Group</title>
+  <!-- Modular CSS Files -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none !important;">
+          <button class="nav-btn" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn" data-page="belajar-1.html">Materi Pembelajaran</button>
+          <button class="nav-btn" data-page="quiz-1.html">Quiz</button>
+          <button class="nav-btn active" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title glitch animate-typing" data-text="MKG Capital Group">MKG Capital Group</h1>
+      <p class="hero-subtitle neon-text animate-neonPulse">Membantu para trader pemula dan menengah untuk belajar memahami dasar dasar trading</p>
+      <p class="hero-description typing-effect animate-fadeIn">
+        Platform edukasi trading terdepan dengan materi komprehensif, analisis mendalam,
+        dan grup trader profesional yang siap membimbing Anda menuju kesuksesan finansial.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item pulse animate-pulse">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Materi Lengkap</div>
+        </div>
+        <div class="stat-item pulse animate-pulse">
+          <div class="stat-number">80+</div>
+          <div class="stat-label">Pertanyaan Quiz</div>
+        </div>
+        <div class="stat-item pulse animate-pulse">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Expert Traders</div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn-primary liquid-btn btn-glow hover-scale" onclick="window.location.href='belajar-1.html'">
+          Mulai Belajar Sekarang
+        </button>
+        <button class="btn-secondary btn-magnetic hover-scale" onclick="window.location.href='quiz-1.html'">
+          Test Pengetahuan
+        </button>
+        <button class="btn-community btn-magnetic hover-scale" onclick="window.location.href='contact.html'">
+          Cara Bergabung ke Komunitas
+        </button>
+      </div>
+    </div>
+    <div class="hero-visual floating animate-floating">
+      <div class="trading-chart card-3d glass-card">
+        <div class="chart-line"></div>
+        <div class="chart-bars">
+          <div class="bar" style="height: 40%"></div>
+          <div class="bar" style="height: 60%"></div>
+          <div class="bar" style="height: 80%"></div>
+          <div class="bar" style="height: 50%"></div>
+          <div class="bar" style="height: 70%"></div>
+          <div class="bar" style="height: 90%"></div>
+        </div>
+      </div>
+      <!-- Added cool animated particles for hero background -->
+      <div class="hero-particles particles"></div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features animate-on-scroll">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll text-gradient">Mengapa Memilih MKG Capital Group?</h2>
+      <div class="features-grid">
+        <div class="feature-card hover-lift card-3d glass-card breathing" style="animation-delay: 0.1s">
+          <div class="feature-icon morph-shape">📚</div>
+          <h3>Materi Komprehensif</h3>
+          <p>Pelajari dari dasar hingga strategi advanced dengan 8 modul lengkap yang dirancang khusus untuk pemula hingga trader berpengalaman.</p>
+        </div>
+        <div class="feature-card hover-glow card-3d glass-card breathing" style="animation-delay: 0.2s">
+          <div class="feature-icon morph-shape">🎯</div>
+          <h3>Quiz Interaktif</h3>
+          <p>Uji pemahaman Anda dengan lebih dari 80 pertanyaan quiz yang mencakup semua aspek trading penting.</p>
+        </div>
+        <div class="feature-card hover-scale card-3d glass-card breathing" style="animation-delay: 0.3s">
+          <div class="feature-icon morph-shape">👥</div>
+          <h3>Komunitas Expert</h3>
+          <p>Bergabung dengan 5 trader profesional yang siap berbagi pengalaman dan pengetahuan mereka.</p>
+        </div>
+        <div class="feature-card hover-lift card-3d glass-card breathing" style="animation-delay: 0.4s">
+          <div class="feature-icon morph-shape">📊</div>
+          <h3>Analisis Mendalam</h3>
+          <p>Pahami analisis teknikal dan fundamental dengan contoh praktis dan studi kasus nyata.</p>
+        </div>
+        <div class="feature-card hover-glow card-3d glass-card breathing" style="animation-delay: 0.5s">
+          <div class="feature-icon morph-shape">🛡️</div>
+          <h3>Manajemen Risiko</h3>
+          <p>Pelajari strategi manajemen risiko yang terbukti untuk melindungi modal dan memaksimalkan profit.</p>
+        </div>
+        <div class="feature-card hover-scale card-3d glass-card breathing" style="animation-delay: 0.6s">
+          <div class="feature-icon morph-shape">🚀</div>
+          <h3>Psikologi Trading</h3>
+          <p>Kuasai aspek mental trading yang sering diabaikan namun krusial untuk kesuksesan jangka panjang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team animate-on-scroll">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll text-gradient">Tim Expert Kami</h2>
+      <p class="section-subtitle animate-on-scroll neon-text">Bertemu dengan trader profesional yang akan membimbing perjalanan trading Anda</p>
+      <div class="team-grid">
+        <div class="team-member card-3d glass-card hover-lift breathing" style="animation-delay: 0.1s">
+          <div class="member-avatar morph-shape pulse">A</div>
+          <h3>Awen kitaa😁</h3>
+          <p>Trading Strategist</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-glow breathing" style="animation-delay: 0.2s">
+          <div class="member-avatar morph-shape pulse">Y</div>
+          <h3>Yongki</h3>
+          <p>Technical Analyst</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-scale breathing" style="animation-delay: 0.3s">
+          <div class="member-avatar morph-shape pulse">R</div>
+          <h3>Reno</h3>
+          <p>nsik pasi tuk timpai jak rena bon yo luat ee</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-lift breathing" style="animation-delay: 0.4s">
+          <div class="member-avatar morph-shape pulse">D</div>
+          <h3>Deo</h3>
+          <p>Market Researcher</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-glow breathing" style="animation-delay: 0.5s">
+          <div class="member-avatar morph-shape pulse">N</div>
+          <h3>Noven si koko cina</h3>
+          <p>Educational Content Creator ,, cogan mc nih bos😅.</p>
+          <p>cewek cewek gasak jak </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section animate-on-scroll">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll text-gradient glitch" data-text="Hubungi Kami">Hubungi Kami</h2>
+      <p class="section-subtitle animate-on-scroll neon-text">Kami siap membantu Anda dalam perjalanan trading Anda</p>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-container card-3d glass-card breathing">
+          <h3 class="form-title text-gradient">Kirim Pesan</h3>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder="Nama Lengkap" class="form-input">
+              <span class="input-icon">👤</span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder="Email" class="form-input">
+              <span class="input-icon">📧</span>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Nomor Telepon (Opsional)" class="form-input">
+              <span class="input-icon">📱</span>
+            </div>
+            <div class="form-group">
+              <select id="subject" name="subject" required class="form-input">
+                <option value="">Pilih Topik</option>
+                <option value="trading">Pertanyaan Trading</option>
+                <option value="materi">Materi Pembelajaran</option>
+                <option value="komunitas">Bergabung Komunitas</option>
+                <option value="konsultasi">Konsultasi Personal</option>
+                <option value="support">Dukungan Teknis</option>
+                <option value="other">Lainnya</option>
+              </select>
+              <span class="input-icon">🎯</span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" required placeholder="Pesan Anda..." class="form-textarea" rows="5"></textarea>
+              <span class="input-icon">💬</span>
+            </div>
+            <button type="submit" class="btn-submit liquid-btn btn-glow btn-magnetic">
+              <span class="submit-icon">🚀</span>
+              Kirim Pesan
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Methods -->
+        <div class="contact-methods">
+          <div class="contact-method-card card-3d glass-card hover-lift breathing" onclick="openContactPopup('whatsapp')">
+            <div class="method-icon whatsapp-icon pulse">💬</div>
+            <h4 class="method-title text-gradient">WhatsApp</h4>
+            <p class="method-description">Chat langsung dengan founder the alpha untuk bergabung ke grup Kami siap membantu Anda dengan pertanyaan seputar trading, materi pembelajaran, dan bergabung ke komunitas.</p>
+            <div class="method-number neon-text">0851-5611-6897</div>
+            <div class="method-status online">● Online</div>
+          </div>
+
+          <div class="contact-method-card card-3d glass-card hover-glow breathing" onclick="openContactPopup('email')">
+            <div class="method-icon email-icon pulse">📧</div>
+            <h4 class="method-title text-gradient">Email</h4>
+            <p class="method-description">Kirim email untuk pertanyaan detail</p>
+            <div class="method-number neon-text">awenhelsins@gmail.com</div>
+            <div class="method-status">● 24/7 Response</div>
+          </div>
+
+          <div class="contact-method-card card-3d glass-card hover-scale breathing" onclick="openContactPopup('phone')">
+            <div class="method-icon phone-icon pulse">📞</div>
+            <h4 class="method-title text-gradient">Telepon</h4>
+            <p class="method-description">Hubungi langsung via telepon</p>
+            <div class="method-number neon-text">+62 851-5611-6897</div>
+            <div class="method-status">● Senin - Jumat</div>
+          </div>
+
+          <div class="contact-method-card card-3d glass-card hover-lift breathing" onclick="openContactPopup('social')">
+            <div class="method-icon social-icon pulse">🌐</div>
+            <h4 class="method-title text-gradient">Media Sosial</h4>
+            <p class="method-description">Ikuti update terbaru kami</p>
+            <div class="method-number neon-text">@mkgcapital</div>
+            <div class="method-status">● Instagram & TikTok</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta animate-on-scroll glass-card">
+    <div class="container">
+      <h2 class="animate-on-scroll text-gradient glitch" data-text="Siap Memulai Perjalanan Trading Anda?">Siap Memulai Perjalanan Trading Anda?</h2>
+      <p class="animate-on-scroll neon-text">Jangan tunggu lagi! Mulai belajar hari ini dan jadilah trader yang sukses.</p>
+      <p class="animate-on-scroll typing-effect">baca materi @Reno, sengak nahh, kalau dah pintar kau jelaskan satu satu tentang strategy trading yang kau tau</p>
+      <div class="cta-buttons animate-on-scroll">
+        <button class="btn-primary liquid-btn btn-glow btn-magnetic" onclick="window.location.href='belajar-1.html'">
+          Mulai Pembelajaran
+        </button>
+        <button class="btn-secondary btn-magnetic btn-glow" onclick="window.location.href='about.html'">
+          Tentang Kami
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="glass-card">
+    <p class="neon-text">© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Popup -->
+  <div id="whatsapp-popup" class="popup animate-popup">
+    <div class="popup-content whatsapp-popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-whatsapp-popup">&times;</span>
+      <h3 class="text-gradient">Hubungi Kami via WhatsApp</h3>
+      <div class="whatsapp-info">
+        <div class="whatsapp-number">
+          <span class="number-label neon-text">Nomor WhatsApp:</span>
+          <span class="number glitch" data-text="0851-5611-6897">0851-5611-6897</span>
+        </div>
+        <p class="whatsapp-description">
+          Klik tombol di bawah untuk langsung membuka WhatsApp dan mulai chat dengan tim MKG Capital Group.
+          Kami siap membantu Anda dengan pertanyaan seputar trading!
+        </p>
+        <div class="whatsapp-actions">
+          <a href="https://wa.me/6285156116897" target="_blank" class="btn-whatsapp-large liquid-btn btn-glow btn-magnetic" id="whatsapp-link">
+            <span class="whatsapp-icon-large">💬</span>
+            Buka WhatsApp
+          </a>
+          <button class="btn-copy liquid-btn btn-glow btn-magnetic" id="copy-number">
+            <span class="copy-icon">📋</span>
+            Salin Nomor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup animate-popup">
+    <div class="popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-popup-members">&times;</span>
+      <h3 class="text-gradient">Anggota MKG Capital Group</h3>
+      <ul class="members-list">
+        <li class="member-item pulse" style="animation-delay: 0.1s;">
+          <span class="member-icon">👨‍💼</span>
+          <span class="member-name neon-text">Awen</span>
+          <span class="member-role">Founder & Lead Trader</span>
+        </li>
+        <li class="member-item pulse" style="animation-delay: 0.2s;">
+          <span class="member-icon">👨‍💻</span>
+          <span class="member-name neon-text">Yongki</span>
+          <span class="member-role">Technical Analyst</span>
+        </li>
+        <li class="member-item pulse" style="animation-delay: 0.3s;">
+          <span class="member-icon">👨‍💼</span>
+          <span class="member-name neon-text">Reno</span>
+          <span class="member-role">Risk Manager</span>
+        </li>
+        <li class="member-item pulse" style="animation-delay: 0.4s;">
+          <span class="member-icon">👨‍💼</span>
+          <span class="member-name neon-text">Deo</span>
+          <span class="member-role">Market Strategist</span>
+        </li>
+        <li class="member-item pulse" style="animation-delay: 0.5s;">
+          <span class="member-icon">👨‍💼</span>
+          <span class="member-name neon-text">Noven</span>
+          <span class="member-role">Community Manager</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup Menu Navigasi -->
+  <div id="popup-menu" class="popup">
+    <div class="popup-content menu-popup">
+      <span class="close-btn" id="close-popup-menu">&times;</span>
+      <h3>Navigasi Menu</h3>
+      <div class="menu-items">
+        <button class="menu-item" data-page="index.html">
+          <span class="menu-icon">🏠</span>
+          <span>Beranda</span>
+        </button>
+        <button class="menu-item" data-page="about.html">
+          <span class="menu-icon">ℹ️</span>
+          <span>Tentang Kami</span>
+        </button>
+        <button class="menu-item" data-page="belajar-1.html">
+          <span class="menu-icon">📚</span>
+          <span>Materi Pembelajaran</span>
+        </button>
+        <button class="menu-item" data-page="quiz-1.html">
+          <span class="menu-icon">🎯</span>
+          <span>Quiz</span>
+        </button>
+        <button class="menu-item active" data-page="contact.html">
+          <span class="menu-icon">📞</span>
+          <span>Kontak</span>
+        </button>
+        <button class="menu-item" id="open-popup-members-menu">
+          <span class="menu-icon">👥</span>
+          <span>Anggota Grup</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <div class="hamburger-popup-header">
+        <div class="hamburger-popup-logo">
+          <h2 class="logo-text">MKG Capital Group</h2>
+          <p class="logo-subtitle">Expert Trading Community</p>
+        </div>
+        <button class="hamburger-popup-close" id="hamburger-popup-close">
+          <span class="close-line"></span>
+          <span class="close-line"></span>
+        </button>
+      </div>
+      <div class="hamburger-popup-menu">
+        <button class="hamburger-menu-item" data-page="index.html">
+          <span class="hamburger-menu-icon">🏠</span>
+          <span class="hamburger-menu-text">Beranda</span>
+        </button>
+        <button class="hamburger-menu-item" data-page="about.html">
+          <span class="hamburger-menu-icon">ℹ️</span>
+          <span class="hamburger-menu-text">Tentang Kami</span>
+        </button>
+
+        <!-- Materi Pembelajaran Section -->
+        <div class="hamburger-menu-section">
+          <div class="hamburger-menu-section-title">📚 Materi Pembelajaran</div>
+          <button class="hamburger-menu-item submenu" data-page="belajar-1.html">
+            <span class="hamburger-menu-icon">1️⃣</span>
+            <span class="hamburger-menu-text">Materi 1 - Dasar Trading</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-2.html">
+            <span class="hamburger-menu-icon">2️⃣</span>
+            <span class="hamburger-menu-text">Materi 2 - Analisis Teknikal</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-3.html">
+            <span class="hamburger-menu-icon">3️⃣</span>
+            <span class="hamburger-menu-text">Materi 3</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-4.html">
+            <span class="hamburger-menu-icon">4️⃣</span>
+            <span class="hamburger-menu-text">Materi 4</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-5.html">
+            <span class="hamburger-menu-icon">5️⃣</span>
+            <span class="hamburger-menu-text">Materi 5</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-6.html">
+            <span class="hamburger-menu-icon">6️⃣</span>
+            <span class="hamburger-menu-text">Materi 6</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-7.html">
+            <span class="hamburger-menu-icon">7️⃣</span>
+            <span class="hamburger-menu-text">Materi 7</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-8.html">
+            <span class="hamburger-menu-icon">8️⃣</span>
+            <span class="hamburger-menu-text">Materi 8</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-9.html">
+            <span class="hamburger-menu-icon">9️⃣</span>
+            <span class="hamburger-menu-text">Materi 9</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-10.html">
+            <span class="hamburger-menu-icon">🔟</span>
+            <span class="hamburger-menu-text">Materi 10</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="belajar-11.html">
+            <span class="hamburger-menu-icon">1️⃣1️⃣</span>
+            <span class="hamburger-menu-text">Materi 11</span>
+          </button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="hamburger-menu-section">
+          <div class="hamburger-menu-section-title">🎯 Quiz</div>
+          <button class="hamburger-menu-item submenu" data-page="quiz-1.html">
+            <span class="hamburger-menu-icon">1️⃣</span>
+            <span class="hamburger-menu-text">Quiz 1</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="quiz-2.html">
+            <span class="hamburger-menu-icon">2️⃣</span>
+            <span class="hamburger-menu-text">Quiz 2</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="quiz-3.html">
+            <span class="hamburger-menu-icon">3️⃣</span>
+            <span class="hamburger-menu-text">Quiz 3</span>
+          </button>
+          <button class="hamburger-menu-item submenu" data-page="quiz-4.html">
+            <span class="hamburger-menu-icon">4️⃣</span>
+            <span class="hamburger-menu-text">Quiz 4</span>
+          </button>
+        </div>
+
+        <!-- Additional Pages -->
+        <button class="hamburger-menu-item" data-page="chatbot.html">
+          <span class="hamburger-menu-icon">🤖</span>
+          <span class="hamburger-menu-text">Chatbot</span>
+        </button>
+        <button class="hamburger-menu-item" data-page="counter.html">
+          <span class="hamburger-menu-icon">🔢</span>
+          <span class="hamburger-menu-text">Counter</span>
+        </button>
+        <button class="hamburger-menu-item" data-page="live-market.html">
+          <span class="hamburger-menu-icon">📊</span>
+          <span class="hamburger-menu-text">Live Market</span>
+        </button>
+        <button class="hamburger-menu-item active" data-page="contact.html">
+          <span class="hamburger-menu-icon">📞</span>
+          <span class="hamburger-menu-text">Kontak</span>
+        </button>
+        <button class="hamburger-menu-item" id="hamburger-open-popup-members">
+          <span class="hamburger-menu-icon">👥</span>
+          <span class="hamburger-menu-text">Anggota Grup</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Materi Pembelajaran -->
+  <div id="popup-materi" class="popup animate-popup">
+    <div class="popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-popup-materi">&times;</span>
+      <h3 class="text-gradient">Materi Pembelajaran Gratis</h3>
+      <p>Semua materi pembelajaran dasar MKG Capital Group tersedia secara gratis untuk membantu Anda memulai perjalanan trading.</p>
+      <p>Materi yang tersedia:</p>
+      <ul class="learning-list">
+        <li class="learning-item pulse" style="animation-delay: 0.1s;">
+          <span class="learning-icon">📈</span>
+          <span class="learning-title neon-text">Dasar-Dasar Trading</span>
+        </li>
+        <li class="learning-item pulse" style="animation-delay: 0.2s;">
+          <span class="learning-icon">📊</span>
+          <span class="learning-title neon-text">Analisis Teknikal</span>
+        </li>
+        <li class="learning-item pulse" style="animation-delay: 0.3s;">
+          <span class="learning-icon">🛡️</span>
+          <span class="learning-title neon-text">Manajemen Risiko</span>
+        </li>
+        <li class="learning-item pulse" style="animation-delay: 0.4s;">
+          <span class="learning-icon">🧠</span>
+          <span class="learning-title neon-text">Psikologi Trading</span>
+        </li>
+        <li class="learning-item pulse" style="animation-delay: 0.5s;">
+          <span class="learning-icon">📚</span>
+          <span class="learning-title neon-text">Dan banyak lagi...</span>
+        </li>
+      </ul>
+      <button class="btn-primary liquid-btn btn-glow btn-magnetic" onclick="window.location.href='belajar-1.html'">Mulai Belajar Sekarang</button>
+    </div>
+  </div>
+
+  <!-- Popup Bergabung Komunitas -->
+  <div id="popup-komunitas" class="popup animate-popup">
+    <div class="popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-popup-komunitas">&times;</span>
+      <h3 class="text-gradient">Cara Bergabung ke Komunitas MKG Capital Group</h3>
+      <p>Untuk bergabung dengan komunitas trader profesional kami, silakan hubungi kami melalui WhatsApp:</p>
+      <div class="whatsapp-contact">
+        <a href="https://wa.me/6285156116897" target="_blank" class="btn-whatsapp-large liquid-btn btn-glow btn-magnetic">
+          <span class="whatsapp-icon">📱</span>
+          Hubungi via WhatsApp: 085156116897
+        </a>
+      </div>
+      <p>Dalam pesan Anda, sertakan informasi berikut:</p>
+      <ul class="requirements-list">
+        <li class="requirement-item pulse" style="animation-delay: 0.1s;">
+          <span class="requirement-icon">👤</span>
+          <span class="requirement-text neon-text">Nama lengkap</span>
+        </li>
+        <li class="requirement-item pulse" style="animation-delay: 0.2s;">
+          <span class="requirement-icon">📈</span>
+          <span class="requirement-text neon-text">Pengalaman trading (jika ada)</span>
+        </li>
+        <li class="requirement-item pulse" style="animation-delay: 0.3s;">
+          <span class="requirement-icon">🎯</span>
+          <span class="requirement-text neon-text">Tujuan bergabung dengan komunitas</span>
+        </li>
+      </ul>
+      <p>Kami akan segera memproses permintaan Anda dan memberikan akses ke komunitas eksklusif kami.</p>
+    </div>
+  </div>
+
+  <!-- Popup Konsultasi Personal -->
+  <div id="popup-konsultasi" class="popup animate-popup">
+    <div class="popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-popup-konsultasi">&times;</span>
+      <h3 class="text-gradient">Konsultasi Personal</h3>
+      <p>Tim expert trader MKG Capital Group siap memberikan konsultasi personal untuk membantu strategi trading Anda.</p>
+      <p>Layanan konsultasi meliputi:</p>
+      <ul class="services-list">
+        <li class="service-item pulse" style="animation-delay: 0.1s;">
+          <span class="service-icon">📊</span>
+          <span class="service-text neon-text">Analisis portofolio</span>
+        </li>
+        <li class="service-item pulse" style="animation-delay: 0.2s;">
+          <span class="service-icon">🎯</span>
+          <span class="service-text neon-text">Saran strategi trading</span>
+        </li>
+        <li class="service-item pulse" style="animation-delay: 0.3s;">
+          <span class="service-icon">🛡️</span>
+          <span class="service-text neon-text">Tips manajemen risiko</span>
+        </li>
+        <li class="service-item pulse" style="animation-delay: 0.4s;">
+          <span class="service-icon">❓</span>
+          <span class="service-text neon-text">Jawaban pertanyaan trading</span>
+        </li>
+      </ul>
+      <div class="whatsapp-contact">
+        <a href="https://wa.me/6285156116897" target="_blank" class="btn-whatsapp-large liquid-btn btn-glow btn-magnetic">
+          <span class="whatsapp-icon">💬</span>
+          Konsultasi via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ultra Cool Contact Popups -->
+  <!-- WhatsApp Contact Popup -->
+  <div id="contact-whatsapp-popup" class="popup animate-popup">
+    <div class="popup-content contact-popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-contact-whatsapp-popup">&times;</span>
+      <div class="popup-header">
+        <div class="popup-icon whatsapp-popup-icon pulse">💬</div>
+        <h3 class="popup-title text-gradient glitch" data-text="WhatsApp Chat">WhatsApp Chat</h3>
+      </div>
+      <div class="popup-body">
+        <div class="contact-info">
+          <div class="contact-number">
+            <span class="contact-label neon-text">Nomor WhatsApp:</span>
+            <span class="contact-value glitch" data-text="0851-5611-6897">0851-5611-6897</span>
+          </div>
+          <div class="contact-status">
+            <span class="status-dot online"></span>
+            <span class="status-text neon-text">Online Sekarang</span>
+          </div>
+        </div>
+        <p class="popup-description">
+          Chat langsung dengan founder the alpha untuk bergabung ke grup Kami siap membantu Anda dengan pertanyaan seputar trading, materi pembelajaran, dan bergabung ke komunitas.
+        </p>
+        <div class="popup-features">
+          <div class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <span class="feature-text">Respon Cepat</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <span class="feature-text">Konsultasi Gratis</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🛡️</span>
+            <span class="feature-text">Privasi Terjamin</span>
+          </div>
+        </div>
+        <div class="popup-actions">
+          <a href="https://wa.me/6285156116897?text=Halo%20MKG%20Capital%20Group,%20saya%20ingin%20bertanya%20tentang..." target="_blank" class="btn-primary-popup liquid-btn btn-glow btn-magnetic">
+            <span class="btn-icon">💬</span>
+            Chat dengan Founder Alpha
+          </a>
+          <button class="btn-secondary-popup btn-glow btn-magnetic" onclick="copyToClipboard('085156116897')">
+            <span class="btn-icon">📋</span>
+            Salin Nomor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email Contact Popup -->
+  <div id="contact-email-popup" class="popup animate-popup">
+    <div class="popup-content contact-popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-contact-email-popup">&times;</span>
+      <div class="popup-header">
+        <div class="popup-icon email-popup-icon pulse">📧</div>
+        <h3 class="popup-title text-gradient glitch" data-text="Kirim Email">Kirim Email</h3>
+      </div>
+      <div class="popup-body">
+        <div class="contact-info">
+          <div class="contact-email">
+            <span class="contact-label neon-text">Email Kami:</span>
+            <span class="contact-value glitch" data-text="awenhelsins@gmail.com">awenhelsins@gmail.com</span>
+          </div>
+          <div class="contact-status">
+            <span class="status-dot available"></span>
+            <span class="status-text neon-text">24/7 Response</span>
+          </div>
+        </div>
+        <p class="popup-description">
+          Kirim email untuk pertanyaan detail, laporan, atau informasi yang lebih lengkap. Tim kami akan merespons dalam 24 jam.
+        </p>
+        <div class="popup-features">
+          <div class="feature-item">
+            <span class="feature-icon">📝</span>
+            <span class="feature-text">Detail Lengkap</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📎</span>
+            <span class="feature-text">Lampiran File</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📊</span>
+            <span class="feature-text">Laporan Terstruktur</span>
+          </div>
+        </div>
+        <div class="popup-actions">
+          <a href="mailto:info@mkgcapital.com?subject=Pertanyaan%20MKG%20Capital%20Group" class="btn-primary-popup liquid-btn btn-glow btn-magnetic">
+            <span class="btn-icon">📧</span>
+            Buka Email Client
+          </a>
+          <button class="btn-secondary-popup btn-glow btn-magnetic" onclick="copyToClipboard('info@mkgcapital.com')">
+            <span class="btn-icon">📋</span>
+            Salin Email
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone Contact Popup -->
+  <div id="contact-phone-popup" class="popup animate-popup">
+    <div class="popup-content contact-popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-contact-phone-popup">&times;</span>
+      <div class="popup-header">
+        <div class="popup-icon phone-popup-icon pulse">📞</div>
+        <h3 class="popup-title text-gradient glitch" data-text="Telepon Kami">Telepon Kami</h3>
+      </div>
+      <div class="popup-body">
+        <div class="contact-info">
+          <div class="contact-phone">
+            <span class="contact-label neon-text">Nomor Telepon:</span>
+            <span class="contact-value glitch" data-text="+62 851-5611-6897">+62 851-5611-6897</span>
+          </div>
+          <div class="contact-status">
+            <span class="status-dot business-hours"></span>
+            <span class="status-text neon-text">Senin - Jumat, 09:00 - 17:00</span>
+          </div>
+        </div>
+        <p class="popup-description">
+          Hubungi kami langsung via telepon untuk konsultasi mendalam, diskusi strategi trading, atau pertanyaan urgent.
+        </p>
+        <div class="popup-features">
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <span class="feature-text">Konsultasi Langsung</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <span class="feature-text">Solusi Cepat</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🗣️</span>
+            <span class="feature-text">Diskusi Interaktif</span>
+          </div>
+        </div>
+        <div class="popup-actions">
+          <a href="tel:+6285156116897" class="btn-primary-popup liquid-btn btn-glow btn-magnetic">
+            <span class="btn-icon">📞</span>
+            Telepon Sekarang
+          </a>
+          <button class="btn-secondary-popup btn-glow btn-magnetic" onclick="copyToClipboard('+6285156116897')">
+            <span class="btn-icon">📋</span>
+            Salin Nomor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Media Contact Popup -->
+  <div id="contact-social-popup" class="popup animate-popup">
+    <div class="popup-content contact-popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-contact-social-popup">&times;</span>
+      <div class="popup-header">
+        <div class="popup-icon social-popup-icon pulse">🌐</div>
+        <h3 class="popup-title text-gradient glitch" data-text="Media Sosial">Media Sosial</h3>
+      </div>
+      <div class="popup-body">
+        <div class="contact-info">
+          <div class="contact-social">
+            <span class="contact-label neon-text">Follow Kami:</span>
+            <span class="contact-value glitch" data-text="@mkgcapital">@mkgcapital</span>
+          </div>
+          <div class="contact-status">
+            <span class="status-dot active"></span>
+            <span class="status-text neon-text">Update Terbaru</span>
+          </div>
+        </div>
+        <p class="popup-description">
+          Ikuti akun media sosial kami untuk mendapatkan update terbaru, tips trading, analisis pasar, dan konten edukasi menarik.
+        </p>
+
+        <div class="popup-features">
+          <div class="feature-item">
+            <span class="feature-icon">📈</span>
+            <span class="feature-text">Analisis Harian</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <span class="feature-text">Tips Trading</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📚</span>
+            <span class="feature-text">Konten Edukasi</span>
+          </div>
+        </div>
+        <div class="popup-actions">
+          <button class="btn-primary-popup liquid-btn btn-glow btn-magnetic" onclick="openSocialLinks()">
+            <span class="btn-icon">🌐</span>
+            Kunjungi Semua Platform
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Message Popup -->
+  <div id="success-popup" class="popup animate-popup">
+    <div class="popup-content success-popup-content glass-card card-3d">
+      <span class="close-btn btn-glow" id="close-success-popup">&times;</span>
+      <div class="popup-header">
+        <div class="popup-icon success-popup-icon pulse">✅</div>
+        <h3 class="popup-title text-gradient">Pesan Terkirim!</h3>
+      </div>
+      <div class="popup-body">
+        <p class="success-message">
+          Terima kasih telah menghubungi MKG Capital Group! Pesan Anda telah berhasil dikirim dan tim kami akan segera merespons.
+        </p>
+        <div class="success-actions">
+          <button class="btn-success liquid-btn btn-glow btn-magnetic" onclick="closePopup('success-popup')">
+            <span class="btn-icon">👍</span>
+            Terima Kasih
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="hamburger-menu-animated.js"></script>
+  <script src="contact-animations.js"></script>
+  <script>
+    // Animate on scroll functionality
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    }
+
+
+
+    // Navigation functionality
+    function handleNavigation() {
+      const navButtons = document.querySelectorAll('.nav-btn[data-page]');
+      const menuItems = document.querySelectorAll('.menu-item[data-page]');
+
+      // Handle nav buttons
+      navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const page = this.getAttribute('data-page');
+          if (page) {
+            window.location.href = page;
+          }
+        });
+      });
+
+      // Handle menu items
+      menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const page = this.getAttribute('data-page');
+          if (page) {
+            window.location.href = page;
+          }
+        });
+      });
+    }
+
+    // Hamburger menu functionality
+    function handleHamburgerMenu() {
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const popupMenu = document.getElementById('popup-menu');
+      const closeMenuBtn = document.getElementById('close-popup-menu');
+      const openMembersMenuBtn = document.getElementById('open-popup-members-menu');
+
+      // Toggle hamburger menu
+      if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', function() {
+          this.classList.toggle('open');
+          if (popupMenu) {
+            popupMenu.classList.toggle('show');
+          }
+        });
+      }
+
+      // Close popup menu
+      if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', function() {
+          if (hamburgerMenu) {
+            hamburgerMenu.classList.remove('open');
+          }
+          if (popupMenu) {
+            popupMenu.classList.remove('show');
+          }
+        });
+      }
+
+      // Handle members menu item
+      if (openMembersMenuBtn) {
+        openMembersMenuBtn.addEventListener('click', function() {
+          // Close menu first
+          if (hamburgerMenu) {
+            hamburgerMenu.classList.remove('open');
+          }
+          if (popupMenu) {
+            popupMenu.classList.remove('show');
+          }
+          // Open members popup
+          openPopup('popup-members');
+        });
+      }
+
+      // Close popup when clicking outside
+      if (popupMenu) {
+        popupMenu.addEventListener('click', function(e) {
+          if (e.target === this) {
+            if (hamburgerMenu) {
+              hamburgerMenu.classList.remove('open');
+            }
+            this.classList.remove('show');
+          }
+        });
+      }
+    }
+
+    // Enhanced popup functionality
+    function enhancePopupFunctionality() {
+      // Close members popup
+      const closeMembersBtn = document.getElementById('close-popup-members');
+      const popupMembers = document.getElementById('popup-members');
+
+      if (closeMembersBtn) {
+        closeMembersBtn.addEventListener('click', () => {
+          closePopup('popup-members');
+        });
+      }
+
+      if (popupMembers) {
+        popupMembers.addEventListener('click', (event) => {
+          if (event.target === popupMembers) {
+            closePopup('popup-members');
+          }
+        });
+      }
+    }
+
+    // Initialize all functionality when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize animate on scroll
+      animateOnScroll();
+
+
+
+      // Initialize navigation
+      handleNavigation();
+
+      // Initialize hamburger menu
+      handleHamburgerMenu();
+
+      // Initialize enhanced popup functionality
+      enhancePopupFunctionality();
+
+      // Existing WhatsApp popup functionality
+      const openWhatsappBtn = document.getElementById('open-whatsapp-popup');
+      const openWhatsappBtn2 = document.getElementById('open-whatsapp-popup-2');
+      const whatsappPopup = document.getElementById('whatsapp-popup');
+      const closeWhatsappBtn = document.getElementById('close-whatsapp-popup');
+      const copyNumberBtn = document.getElementById('copy-number');
+
+      // Open WhatsApp popup
+      if (openWhatsappBtn) {
+        openWhatsappBtn.addEventListener('click', () => {
+          openPopup('whatsapp-popup');
+        });
+      }
+
+      if (openWhatsappBtn2) {
+        openWhatsappBtn2.addEventListener('click', () => {
+          openPopup('whatsapp-popup');
+        });
+      }
+
+      // Close WhatsApp popup
+      if (closeWhatsappBtn) {
+        closeWhatsappBtn.addEventListener('click', () => {
+          closePopup('whatsapp-popup');
+        });
+      }
+
+      // Copy number functionality
+      if (copyNumberBtn) {
+        copyNumberBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText('085156116897').then(() => {
+            alert('Nomor WhatsApp berhasil disalin!');
+          }).catch(err => {
+            console.error('Failed to copy: ', err);
+            alert('Gagal menyalin nomor. Silakan salin manual: 085156116897');
+          });
+        });
+      }
+
+      // Close popup when clicking outside
+      if (whatsappPopup) {
+        whatsappPopup.addEventListener('click', (event) => {
+          if (event.target === whatsappPopup) {
+            closePopup('whatsapp-popup');
+          }
+        });
+      }
+
+
+    });
+  </script>
+</body>
+</html>

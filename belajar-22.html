@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materi Pembelajaran 22 - MKG Capital Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="learning-styles.css" />
+</head>
+<body class="belajar-page">
+
+  <header>
+    <div class="container">
+      <h1>MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none;">
+          <button class="nav-btn" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn active" data-page="belajar-22.html">Materi Pembelajaran</button>
+          <button class="nav-btn" data-page="quiz-1.html">Quiz</button>
+          <button class="nav-btn" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Learning Hero Section -->
+  <section class="learning-hero">
+    <div class="container">
+      <div class="learning-hero-content">
+        <h1 class="learning-title">Ichimoku Cloud</h1>
+        <p class="learning-subtitle">Materi Pembelajaran 22</p>
+        <p class="learning-description">
+          Pelajari sistem analisis komprehensif Ichimoku Cloud yang menyediakan support/resistance, momentum, dan arah tren dalam satu indikator lengkap.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Progress Section -->
+    <div class="progress-container">
+      <div class="progress-header">
+        <div class="progress-title">Progres Pembelajaran</div>
+        <div class="progress-percentage">0%</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Introduction Card -->
+    <div class="content-section">
+      <span class="section-icon">🎯</span>
+      <h2 class="section-title">Pengantar Ichimoku Cloud</h2>
+      <div class="section-content">
+        <p>Ichimoku Cloud adalah sistem analisis teknikal komprehensif yang dikembangkan oleh Goichi Hosoda pada tahun 1930-an di Jepang. Sistem ini dikenal sebagai "Ichimoku Kinko Hyo" yang berarti "chart balance at a glance". Ichimoku Cloud menyediakan semua informasi yang diperlukan trader dalam satu pandangan: support/resistance, momentum, trend direction, dan entry/exit signals.</p>
+        <p>Berbeda dengan indikator Barat yang fokus pada satu aspek, Ichimoku Cloud mengintegrasikan multiple timeframe analysis, moving averages, dan momentum indicators menjadi satu sistem yang powerful. Cloud (awan) yang menjadi komponen utama memberikan visual yang jelas tentang kondisi pasar saat ini.</p>
+      </div>
+    </div>
+
+    <!-- Ichimoku Components Card -->
+    <div class="content-section">
+      <span class="section-icon">📊</span>
+      <h2 class="section-title">Komponen Ichimoku Cloud</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>🔍 Lima Komponen Utama</h3>
+          <p>Ichimoku terdiri dari 5 garis yang masing-masing memiliki fungsi spesifik.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Tenkan-sen (Conversion Line)</div>
+            <div class="list-item-description">(High + Low) / 2 untuk 9 periode - Moving average jangka pendek</div>
+          </li>
+          <li>
+            <div class="list-item-title">Kijun-sen (Base Line)</div>
+            <div class="list-item-description">(High + Low) / 2 untuk 26 periode - Moving average jangka menengah</div>
+          </li>
+          <li>
+            <div class="list-item-title">Senkou Span A (Leading Span A)</div>
+            <div class="list-item-description">(Tenkan-sen + Kijun-sen) / 2, diproyeksikan 26 periode ke depan</div>
+          </li>
+          <li>
+            <div class="list-item-title">Senkou Span B (Leading Span B)</div>
+            <div class="list-item-description">(High + Low) / 2 untuk 52 periode, diproyeksikan 26 periode ke depan</div>
+          </li>
+          <li>
+            <div class="list-item-title">Chikou Span (Lagging Span)</div>
+            <div class="list-item-description">Harga penutupan saat ini, diproyeksikan 26 periode ke belakang</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- How to Read Ichimoku Card -->
+    <div class="content-section">
+      <span class="section-icon">📖</span>
+      <h2 class="section-title">Cara Membaca Ichimoku</h2>
+      <div class="section-content">
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">The Cloud (Kumo)</div>
+            <div class="list-item-description">Area antara Senkou Span A dan B - support/resistance dinamis</div>
+          </li>
+          <li>
+            <div class="list-item-title">Cloud Color</div>
+            <div class="list-item-description">Hijau = bullish, merah = bearish, tipis = netral</div>
+          </li>
+          <li>
+            <div class="list-item-title">Price vs Cloud</div>
+            <div class="list-item-description">Di atas cloud = uptrend, di bawah cloud = downtrend, di dalam cloud = sideways</div>
+          </li>
+          <li>
+            <div class="list-item-title">Lagging Span</div>
+            <div class="list-item-description">Di atas harga = bullish, di bawah harga = bearish</div>
+          </li>
+          <li>
+            <div class="list-item-title">TK Cross KJ</div>
+            <div class="list-item-description">Tenkan cross Kijun - sinyal momentum jangka pendek</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ichimoku Signals Card -->
+    <div class="content-section">
+      <span class="section-icon">📈</span>
+      <h2 class="section-title">Sinyal Ichimoku</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>⚡ Sinyal Trading</h3>
+          <p>Ichimoku memberikan berbagai sinyal berdasarkan interaksi komponen-komponennya.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Cloud Breakout</div>
+            <div class="list-item-description">Harga break di atas cloud = buy signal, break di bawah cloud = sell signal</div>
+          </li>
+          <li>
+            <div class="list-item-title">TK Cross KJ</div>
+            <div class="list-item-description">Tenkan cross Kijun ke atas = bullish, ke bawah = bearish</div>
+          </li>
+          <li>
+            <div class="list-item-title">Chikou Confirmation</div>
+            <div class="list-item-description">Chikou di atas harga masa lalu = konfirmasi bullish</div>
+          </li>
+          <li>
+            <div class="list-item-title">Cloud Twist</div>
+            <div class="list-item-description">Senkou A cross Senkou B - perubahan momentum jangka panjang</div>
+          </li>
+          <li>
+            <div class="list-item-title">Kumo Breakout</div>
+            <div class="list-item-description">Harga break cloud dengan volume tinggi = sinyal kuat</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trading with Ichimoku Card -->
+    <div class="content-section">
+      <span class="section-icon">🎯</span>
+      <h2 class="section-title">Trading dengan Ichimoku</h2>
+      <div class="section-content">
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Trend Following</div>
+            <div class="list-item-description">Trade sesuai arah cloud - di atas cloud untuk long, di bawah cloud untuk short</div>
+          </li>
+          <li>
+            <div class="list-item-title">Cloud Bounce</div>
+            <div class="list-item-description">Entry pada bounce dari cloud edge sebagai support/resistance</div>
+          </li>
+          <li>
+            <div class="list-item-title">Multiple Signal Confirmation</div>
+            <div class="list-item-description">Tunggu konfirmasi dari TK cross KJ dan Chikou sebelum entry</div>
+          </li>
+          <li>
+            <div class="list-item-title">Timeframe Analysis</div>
+            <div class="list-item-description">Gunakan timeframe mingguan untuk trend utama, harian untuk entry</div>
+          </li>
+          <li>
+            <div class="list-item-title">Risk Management</div>
+            <div class="list-item-description">Stop loss di cloud edge terdekat, target profit di cloud edge berikutnya</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cloud Analysis Card -->
+    <div class="content-section">
+      <span class="section-icon">☁️</span>
+      <h2 class="section-title">Analisis Cloud</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>🌥️ Interpretasi Cloud</h3>
+          <p>Cloud adalah komponen terpenting Ichimoku yang memberikan gambaran kondisi pasar.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Cloud Thickness</div>
+            <div class="list-item-description">Cloud tebal = support/resistance kuat, cloud tipis = level lemah</div>
+          </li>
+          <li>
+            <div class="list-item-title">Cloud Color</div>
+            <div class="list-item-description">Hijau = demand > supply, merah = supply > demand</div>
+          </li>
+          <li>
+            <div class="list-item-title">Future Cloud</div>
+            <div class="list-item-description">Cloud yang diproyeksikan ke depan membantu antisipasi level kunci</div>
+          </li>
+          <li>
+            <div class="list-item-title">Cloud as Target</div>
+            <div class="list-item-description">Gunakan cloud sebagai target profit atau stop loss</div>
+          </li>
+          <li>
+            <div class="list-item-title">Cloud Break Confirmation</div>
+            <div class="list-item-description">Break cloud harus ditutup di luar cloud untuk konfirmasi</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="learning-navigation">
+      <div class="nav-buttons">
+        <button class="btn-primary" id="open-popup-quiz">
+          <span style="margin-right: 8px;">📝</span>
+          Kerjakan Quiz
+        </button>
+      </div>
+      <nav class="pagination">
+        <a href="belajar-21.html">&laquo; Materi Sebelumnya</a> |
+        <a href="belajar-23.html">Materi Berikutnya &raquo;</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-members">&times;</span>
+      <h3>Anggota MKG Capital Group</h3>
+      <ul>
+        <li>Awen</li>
+        <li>Yongki</li>
+        <li>Reno</li>
+        <li>Deo</li>
+        <li>Noven</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup Materi Pembelajaran -->
+  <div id="popup-learning" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-learning">&times;</span>
+      <h3>Materi Pembelajaran</h3>
+      <p>Anda sedang membaca Materi 22: Ichimoku Cloud.</p>
+    </div>
+  </div>
+
+  <!-- Popup Quiz -->
+  <div id="popup-quiz" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-quiz">&times;</span>
+      <h3>Quiz Ichimoku Cloud</h3>
+
+      <form class="quiz-form">
+        <div class="question">
+          <p>1. Ichimoku Kinko Hyo artinya?</p>
+          <label><input type="radio" name="q1" data-correct="true" /> Chart balance at a glance</label><br />
+          <label><input type="radio" name="q1" /> Moving average system</label><br />
+          <label><input type="radio" name="q1" /> Momentum indicator</label><br />
+        </div>
+
+        <div class="question">
+          <p>2. Siapa yang mengembangkan Ichimoku?</p>
+          <label><input type="radio" name="q2" /> John Bollinger</label><br />
+          <label><input type="radio" name="q2" data-correct="true" /> Goichi Hosoda</label><br />
+          <label><input type="radio" name="q2" /> Gerald Appel</label><br />
+        </div>
+
+        <div class="question">
+          <p>3. Tenkan-sen periode?</p>
+          <label><input type="radio" name="q3" /> 26</label><br />
+          <label><input type="radio" name="q3" data-correct="true" /> 9</label><br />
+          <label><input type="radio" name="q3" /> 52</label><br />
+        </div>
+
+        <div class="question">
+          <p>4. Kijun-sen periode?</p>
+          <label><input type="radio" name="q4" data-correct="true" /> 26</label><br />
+          <label><input type="radio" name="q4" /> 9</label><br />
+          <label><input type="radio" name="q4" /> 52</label><br />
+        </div>
+
+        <div class="question">
+          <p>5. Cloud terbentuk dari?</p>
+          <label><input type="radio" name="q5" /> Tenkan dan Kijun</label><br />
+          <label><input type="radio" name="q5" data-correct="true" /> Senkou A dan B</label><br />
+          <label><input type="radio" name="q5" /> Chikou Span</label><br />
+        </div>
+
+        <div class="question">
+          <p>6. Cloud hijau menunjukkan?</p>
+          <label><input type="radio" name="q6" /> Bearish</label><br />
+          <label><input type="radio" name="q6" data-correct="true" /> Bullish</label><br />
+          <label><input type="radio" name="q6" /> Neutral</label><br />
+        </div>
+
+        <div class="question">
+          <p>7. Chikou Span adalah?</p>
+          <label><input type="radio" name="q7" /> Future projection</label><br />
+          <label><input type="radio" name="q7" data-correct="true" /> Lagging price</label><br />
+          <label><input type="radio" name="q7" /> Moving average</label><br />
+        </div>
+
+        <div class="question">
+          <p>8. TK cross KJ ke atas?</p>
+          <label><input type="radio" name="q8" /> Sell signal</label><br />
+          <label><input type="radio" name="q8" data-correct="true" /> Buy signal</label><br />
+          <label><input type="radio" name="q8" /> No signal</label><br />
+        </div>
+
+        <div class="question">
+          <p>9. Cloud breakout terjadi ketika?</p>
+          <label><input type="radio" name="q9" /> Harga di dalam cloud</label><br />
+          <label><input type="radio" name="q9" data-correct="true" /> Harga break cloud</label><br />
+          <label><input type="radio" name="q9" /> Cloud berubah warna</label><br />
+        </div>
+
+        <div class="question">
+          <p>10. Ichimoku terbaik untuk?</p>
+          <label><input type="radio" name="q10" /> Single timeframe</label><br />
+          <label><input type="radio" name="q10" data-correct="true" /> Multiple timeframe analysis</label><br />
+          <label><input type="radio" name="q10" /> Short-term trading</label><br />
+        </div>
+
+        <button type="submit">Kirim Jawaban</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script-updated.js"></script>
+  <script src="script.js"></script>
+  <script src="hamburger-menu.js"></script>
+
+  <!-- Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <button class="hamburger-close-btn" id="hamburger-close-btn">&times;</button>
+      <div class="hamburger-nav-buttons">
+        <button class="hamburger-nav-btn" data-page="index.html">Beranda</button>
+        <button class="hamburger-nav-btn" data-page="about.html">Tentang Kami</button>
+        <button class="hamburger-nav-btn active" data-page="belajar-22.html">Materi Pembelajaran</button>
+        <button class="hamburger-nav-btn" data-page="quiz-1.html">Quiz</button>
+        <button class="hamburger-nav-btn" data-page="contact.html">Kontak</button>
+        <button class="hamburger-nav-btn" id="hamburger-open-popup-members">Anggota Grup</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

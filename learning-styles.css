@@ -1,0 +1,475 @@
+/* Learning Pages Enhanced Styles */
+
+/* Modern Layout and Typography */
+.learning-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.learning-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+}
+
+.learning-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.learning-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: fadeInUp 1s ease-out;
+}
+
+.learning-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+/* Enhanced Progress Bar - Learning specific styles */
+.learning-progress-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.learning-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.learning-progress-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.learning-progress-percentage {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.learning-progress-bar {
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.learning-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px;
+  width: 0%;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.learning-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  animation: learning-shimmer 2s infinite;
+}
+
+@keyframes learning-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Content Cards */
+.content-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(102, 126, 234, 0.08);
+  transition: all 0.3s ease;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.content-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.content-section:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.content-section:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.section-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* List Styles */
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.content-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+.content-list li:last-child {
+  border-bottom: none;
+}
+
+.content-list li::before {
+  content: '📈';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  font-size: 1.2rem;
+}
+
+.content-list li:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 8px;
+  padding-left: 2.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-right: 0.5rem;
+}
+
+.list-item-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.list-item-description {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Code and Technical Content */
+.code-block {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.highlight-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.highlight-box p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* Navigation Enhancement */
+.learning-navigation {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(102, 126, 234, 0.08);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.pagination a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .learning-title {
+    font-size: 2.5rem;
+  }
+
+  .learning-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .content-section {
+    background: #2d3748;
+    color: #e2e8f0;
+    border-color: rgba(102, 126, 234, 0.874);
+  }
+
+  .section-title {
+    color: #e2e8f0;
+  }
+
+  .section-content {
+    color: #cbd5e0;
+  }
+
+  .content-list li {
+    border-color: #4a5568;
+  }
+
+  .code-block {
+    background: #1a202c;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .learning-navigation,
+  .learning-progress-container {
+    display: none;
+  }
+
+  .content-section {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Belajar Page Section Text Color */
+.belajar-page .content-section .section-content,
+.belajar-page .content-section .section-title,
+.belajar-page .content-section .list-item-title,
+.belajar-page .content-section .list-item-description,
+.belajar-page .content-section .highlight-box h3,
+.belajar-page .content-section .highlight-box p,
+.belajar-page .content-section .report-card h4,
+.belajar-page .content-section .report-card p,
+.belajar-page .content-section .report-metrics li,
+.belajar-page .content-section .ratio-category h4,
+.belajar-page .content-section .ratio-list li,
+.belajar-page .content-section .indicator-card h4,
+.belajar-page .content-section .indicator-card p,
+.belajar-page .content-section .indicator-features li,
+.belajar-page .content-section .pattern-card h4,
+.belajar-page .content-section .pattern-card p,
+.belajar-page .content-section .pattern-features li,
+.belajar-page .content-section .volume-type h4,
+.belajar-page .content-section .volume-type ul li {
+  color: #90ee90;
+}
+
+/* About Page Achievement Cards Text Color */
+.about-page .achievement-card .achievement-icon,
+.about-page .achievement-card .achievement-number,
+.about-page .achievement-card .achievement-label,
+.about-page .achievement-card p {
+  color: #90ee90 !important;
+}
+
+/* About Page CTA Section Text Color */
+.about-page .cta h2,
+.about-page .cta p {
+  color: #90ee90 !important;
+}
+
+/* About Page Footer Text Color - Updated for better visibility */
+.about-page .enhanced-footer .footer-section h4,
+.about-page .enhanced-footer .footer-section h3,
+.about-page .enhanced-footer .company-description,
+.about-page .enhanced-footer .footer-links a,
+.about-page .enhanced-footer .social-link,
+.about-page .enhanced-footer .newsletter-content h4,
+.about-page .enhanced-footer .newsletter-content p,
+.about-page .enhanced-footer .copyright,
+.about-page .enhanced-footer .badge {
+  color: rgba(255,255,255,0.95) !important;
+}
+
+.about-page .enhanced-footer .footer-links a:hover,
+.about-page .enhanced-footer .social-link:hover {
+  color: #f39c12 !important;
+}
+
+.about-page .enhanced-footer .stat-mini .stat-number {
+  color: #f39c12 !important;
+}
+
+/* Belajar Page Bottom Section Background Color */
+.belajar-page .learning-navigation {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid rgb(255, 255, 255) !important;
+}
+
+.belajar-page .learning-navigation .pagination a {
+  color: #64b5f6 !important;
+}
+
+.belajar-page .learning-navigation .pagination a:hover {
+  color: #1976d2 !important;
+}

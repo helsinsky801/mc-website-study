@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MKG Capital Group - Beranda</title>
+  <!-- Modular CSS Files -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none;">
+          <button class="nav-btn active" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn" data-page="portfolio.html">Portfolio Founder</button>
+          <button class="nav-btn" data-page="belajar-1.html">Materi Pembelajaran</button>
+          <button class="nav-btn" data-page="quiz-1.html">Quiz</button>
+          <button class="nav-btn" data-page="live-market.html">Live Market</button>
+          <button class="nav-btn" data-page="chatbot.html">Chatbot</button>
+          <button class="nav-btn" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title glitch animate-typing" data-text="MKG Capital Group">MKG Capital Group</h1>
+      <p class="hero-subtitle neon-text animate-neonPulse">Membantu para trader pemula dan menengah untuk belajar memahami dasar dasar trading</p>
+      <p class="hero-description typing-effect animate-fadeIn">
+        Platform edukasi trading terdepan dengan materi komprehensif, analisis mendalam,
+        dan grup trader profesional yang siap membimbing Anda menuju kesuksesan finansial.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item pulse animate-pulse">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Materi Lengkap</div>
+        </div>
+        <div class="stat-item pulse animate-pulse">
+          <div class="stat-number">80+</div>
+          <div class="stat-label">Pertanyaan Quiz</div>
+        </div>
+        <div class="stat-item pulse animate-pulse">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Expert Traders</div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn-primary liquid-btn btn-glow hover-scale" onclick="window.location.href='belajar-1.html'">
+          Mulai Belajar Sekarang
+        </button>
+        <button class="btn-secondary btn-magnetic hover-scale" onclick="window.location.href='quiz-1.html'">
+          Test Pengetahuan
+        </button>
+        <button class="btn-community btn-magnetic hover-scale" onclick="window.location.href='contact.html'">
+          Cara Bergabung ke Komunitas
+        </button>
+      </div>
+    </div>
+    <div class="hero-visual floating animate-floating">
+      <div class="trading-chart card-3d glass-card">
+        <div class="chart-line"></div>
+        <div class="chart-bars">
+          <div class="bar" style="height: 40%"></div>
+          <div class="bar" style="height: 60%"></div>
+          <div class="bar" style="height: 80%"></div>
+          <div class="bar" style="height: 50%"></div>
+          <div class="bar" style="height: 70%"></div>
+          <div class="bar" style="height: 90%"></div>
+        </div>
+      </div>
+      <!-- Added cool animated particles for hero background -->
+      <div class="hero-particles particles"></div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features animate-on-scroll">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll text-gradient">Mengapa Memilih MKG Capital Group?</h2>
+      <div class="features-grid">
+        <div class="feature-card hover-lift card-3d glass-card breathing" style="animation-delay: 0.1s">
+          <div class="feature-icon morph-shape">📚</div>
+          <h3>Materi Komprehensif</h3>
+          <p>Pelajari dari dasar hingga strategi advanced dengan 8 modul lengkap yang dirancang khusus untuk pemula hingga trader berpengalaman.</p>
+        </div>
+        <div class="feature-card hover-glow card-3d glass-card breathing" style="animation-delay: 0.2s">
+          <div class="feature-icon morph-shape">🎯</div>
+          <h3>Quiz Interaktif</h3>
+          <p>Uji pemahaman Anda dengan lebih dari 80 pertanyaan quiz yang mencakup semua aspek trading penting.</p>
+        </div>
+        <div class="feature-card hover-scale card-3d glass-card breathing" style="animation-delay: 0.3s">
+          <div class="feature-icon morph-shape">👥</div>
+          <h3>Komunitas Expert</h3>
+          <p>Bergabung dengan 5 trader profesional yang siap berbagi pengalaman dan pengetahuan mereka.</p>
+        </div>
+        <div class="feature-card hover-lift card-3d glass-card breathing" style="animation-delay: 0.4s">
+          <div class="feature-icon morph-shape">📊</div>
+          <h3>Analisis Mendalam</h3>
+          <p>Pahami analisis teknikal dan fundamental dengan contoh praktis dan studi kasus nyata.</p>
+        </div>
+        <div class="feature-card hover-glow card-3d glass-card breathing" style="animation-delay: 0.5s">
+          <div class="feature-icon morph-shape">🛡️</div>
+          <h3>Manajemen Risiko</h3>
+          <p>Pelajari strategi manajemen risiko yang terbukti untuk melindungi modal dan memaksimalkan profit.</p>
+        </div>
+        <div class="feature-card hover-scale card-3d glass-card breathing" style="animation-delay: 0.6s">
+          <div class="feature-icon morph-shape">🚀</div>
+          <h3>Psikologi Trading</h3>
+          <p>Kuasai aspek mental trading yang sering diabaikan namun krusial untuk kesuksesan jangka panjang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team animate-on-scroll">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll text-gradient">Tim Expert Kami</h2>
+      <p class="section-subtitle animate-on-scroll neon-text">Bertemu dengan trader profesional yang akan membimbing perjalanan trading Anda</p>
+      <div class="team-grid">
+        <div class="team-member card-3d glass-card hover-lift breathing" style="animation-delay: 0.1s">
+          <div class="member-avatar morph-shape pulse">A</div>
+          <h3>Awen kitaa😁</h3>
+          <p>Trading Strategist</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-glow breathing" style="animation-delay: 0.2s">
+          <div class="member-avatar morph-shape pulse">Y</div>
+          <h3>Yongki</h3>
+          <p>Technical Analyst</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-scale breathing" style="animation-delay: 0.3s">
+          <div class="member-avatar morph-shape pulse">R</div>
+          <h3>Reno</h3>
+          <p>nsik pasi tuk timpai jak rena bon yo luat ee</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-lift breathing" style="animation-delay: 0.4s">
+          <div class="member-avatar morph-shape pulse">D</div>
+          <h3>Deo</h3>
+          <p>Market Researcher</p>
+        </div>
+        <div class="team-member card-3d glass-card hover-glow breathing" style="animation-delay: 0.5s">
+          <div class="member-avatar morph-shape pulse">N</div>
+          <h3>Noven si koko cina</h3>
+          <p>Educational Content Creator ,, cogan mc nih bos😅.</p>
+          <p>cewek cewek gasak jak </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bot Accounts Section -->
+  <section class="bot-accounts animate-on-scroll glass-card">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll text-gradient">Bot Accounts</h2>
+      <p class="section-subtitle animate-on-scroll neon-text">Generated bot accounts for testing</p>
+      <div id="accounts-list" class="accounts-grid"></div>
+      <button class="btn-primary liquid-btn btn-glow" id="generate-btn">Generate New Accounts</button>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta animate-on-scroll glass-card">
+    <div class="container">
+      <h2 class="animate-on-scroll text-gradient glitch" data-text="Siap Memulai Perjalanan Trading Anda?">Siap Memulai Perjalanan Trading Anda?</h2>
+      <p class="animate-on-scroll neon-text">Jangan tunggu lagi! Mulai belajar hari ini dan jadilah trader yang sukses.</p>
+      <p class="animate-on-scroll typing-effect">baca materi @Reno, sengak nahh, kalau dah pintar kau jelaskan satu satu tentang strategy trading yang kau tau</p>
+      <div class="cta-buttons animate-on-scroll">
+        <button class="btn-primary liquid-btn btn-glow btn-magnetic" onclick="window.location.href='belajar-1.html'">
+          Mulai Pembelajaran
+        </button>
+        <button class="btn-secondary btn-magnetic btn-glow" onclick="window.location.href='about.html'">
+          Tentang Kami
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="glass-card">
+    <p class="neon-text">© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-members">&times;</span>
+      <h3>Anggota MKG Capital Group</h3>
+      <ul>
+        <li>Awen</li>
+        <li>Yongki</li>
+        <li>Reno</li>
+        <li>Deo</li>
+        <li>Noven</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup Materi Pembelajaran -->
+  <div id="popup-learning" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-learning">&times;</span>
+      <h3>Materi Pembelajaran</h3>
+      <p>Silahkan akses halaman <a href="belajar-1.html">Materi Pembelajaran</a> untuk mempelajari lebih lanjut.</p>
+    </div>
+  </div>
+
+  <!-- Popup Quiz -->
+  <div id="popup-quiz" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-quiz">&times;</span>
+      <h3>Mulai Quiz</h3>
+      <p>Mulai quiz di halaman <a href="quiz-1.html">Quiz</a>.</p>
+    </div>
+  </div>
+
+  <!-- Popup Menu Navigasi -->
+  <div id="popup-menu" class="popup">
+    <div class="popup-content menu-popup">
+      <span class="close-btn" id="close-popup-menu">&times;</span>
+      <h3>Navigasi Menu</h3>
+      <div class="menu-items" id="popup-menu-items">
+        <button class="menu-item active" data-page="index.html">
+          <span class="menu-icon">🏠</span>
+          <span>Beranda</span>
+        </button>
+        <button class="menu-item" data-page="about.html">
+          <span class="menu-icon">ℹ️</span>
+          <span>Tentang Kami</span>
+        </button>
+        <button class="menu-item" data-page="belajar-1.html">
+          <span class="menu-icon">📚</span>
+          <span>Materi Pembelajaran</span>
+        </button>
+        <button class="menu-item" data-page="quiz-1.html">
+          <span class="menu-icon">🎯</span>
+          <span>Quiz</span>
+        </button>
+        <button class="menu-item" data-page="chatbot.html">
+          <span class="menu-icon">🤖</span>
+          <span>Chatbot</span>
+        </button>
+        <button class="menu-item" data-page="contact.html">
+          <span class="menu-icon">📞</span>
+          <span>Kontak</span>
+        </button>
+        <button class="menu-item" id="open-popup-members-menu">
+          <span class="menu-icon">👥</span>
+          <span>Anggota Grup</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Cara Bergabung ke Komunitas -->
+  <div id="popup-community" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-community-popup">&times;</span>
+      <h3>Cara Bergabung ke Komunitas MKG Capital Group</h3>
+      <p>Untuk bergabung dengan komunitas trader profesional kami, silakan hubungi kami melalui WhatsApp:</p>
+      <div class="whatsapp-contact">
+        <a href="https://wa.me/6285156116897" target="_blank" class="btn-whatsapp-large">
+          <span class="whatsapp-icon">📱</span>
+          Hubungi via WhatsApp: 085156116897
+        </a>
+      </div>
+      <p>Dalam pesan Anda, sertakan informasi berikut:</p>
+      <ul>
+        <li>Nama lengkap</li>
+        <li>Pengalaman trading (jika ada)</li>
+        <li>Tujuan bergabung dengan komunitas</li>
+      </ul>
+      <p>Kami akan segera memproses permintaan Anda dan memberikan akses ke komunitas eksklusif kami.</p>
+    </div>
+  </div>
+
+  <!-- Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <button class="hamburger-close-btn" id="hamburger-close-btn">&times;</button>
+      <div class="hamburger-logo">
+        <span class="logo-emoji">📈</span>
+        <h3>MKG Capital Group</h3>
+      </div>
+      <div class="hamburger-nav-buttons">
+        <button class="hamburger-nav-btn" data-page="index.html">🏠 Beranda</button>
+        <button class="hamburger-nav-btn" data-page="about.html">ℹ️ Tentang Kami</button>
+        <button class="hamburger-nav-btn" data-page="portfolio.html">👤 Portfolio Founder</button>
+        <button class="hamburger-nav-btn" data-page="belajar-1.html">📚 Materi Pembelajaran</button>
+        <button class="hamburger-nav-btn" data-page="quiz-1.html">🎯 Quiz</button>
+        <button class="hamburger-nav-btn" data-page="live-market.html">📊 Live Market</button>
+        <button class="hamburger-nav-btn" data-page="chatbot.html">🤖 Chatbot</button>
+        <button class="hamburger-nav-btn" data-page="contact.html">📞 Kontak</button>
+        <button class="hamburger-nav-btn" id="hamburger-open-popup-members">👥 Anggota Grup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Login -->
+  <div id="popup-login" class="popup">
+    <div class="popup-content auth-popup">
+      <span class="close-btn" id="close-popup-login">&times;</span>
+      <h3>Login ke MKG Capital Group</h3>
+      <form id="login-form" class="auth-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required>
+        </div>
+        <button type="submit" class="btn-auth">Login</button>
+      </form>
+      <p class="auth-switch">Belum punya akun? <a href="#" id="switch-to-register">Daftar di sini</a></p>
+    </div>
+  </div>
+
+  <!-- Popup Register -->
+  <div id="popup-register" class="popup">
+    <div class="popup-content auth-popup">
+      <span class="close-btn" id="close-popup-register">&times;</span>
+      <h3>Daftar ke MKG Capital Group</h3>
+      <form id="register-form" class="auth-form">
+        <div class="form-group">
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="register-confirm-password">Konfirmasi Password</label>
+          <input type="password" id="register-confirm-password" name="confirm-password" required>
+        </div>
+        <button type="submit" class="btn-auth">Daftar</button>
+      </form>
+      <p class="auth-switch">Sudah punya akun? <a href="#" id="switch-to-login">Login di sini</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="script-updated.js"></script>
+  <script src="hamburger-menu-animated.js"></script>
+  <script src="page-animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* Live Market Layout Variations */
+
+/* Layout Selector Styles */
+.layout-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.layout-btn {
+  background: rgba(255,255,255,0.1);
+  color: #b0b0b0;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.layout-btn:hover,
+.layout-btn.active {
+  color: #64b5f6;
+  background: rgba(100, 181, 246, 0.2);
+  border-color: #64b5f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
+}
+
+/* Base Layout Styles */
+.tradingview-widgets-section-enhanced {
+  transition: all 0.5s ease;
+  padding: 20px;
+}
+
+/* 1. Grid Layout (Default) */
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.layout-grid .tradingview-widget-container {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.layout-grid .tradingview-widget-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  border-color: rgba(100, 181, 246, 0.3);
+}
+
+/* 2. List Layout */
+.layout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.layout-list .tradingview-widget-container {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.layout-list .tradingview-widget-container:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  border-color: rgba(100, 181, 246, 0.3);
+}
+
+/* 3. Card Layout */
+.layout-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.layout-card .tradingview-widget-container {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout-card .tradingview-widget-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.layout-card .tradingview-widget-container:hover::before {
+  left: 100%;
+}
+
+.layout-card .tradingview-widget-container:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(100, 181, 246, 0.3);
+  border-color: rgba(100, 181, 246, 0.5);
+}
+
+/* 4. Compact Layout */
+.layout-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.layout-compact .tradingview-widget-container {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.layout-compact .tradingview-widget-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border-color: rgba(100, 181, 246, 0.3);
+}
+
+/* 5. Expanded Layout */
+.layout-expanded {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.layout-expanded .tradingview-widget-container {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.layout-expanded .tradingview-widget-container:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 40px rgba(100, 181, 246, 0.4);
+  border-color: rgba(100, 181, 246, 0.5);
+}
+
+/* 6. Mixed Layout */
+.layout-mixed {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.layout-mixed .tradingview-widget-container:nth-child(1) {
+  grid-row: span 2;
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.layout-mixed .tradingview-widget-container:nth-child(1):hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  border-color: rgba(100, 181, 246, 0.4);
+}
+
+.layout-mixed .tradingview-widget-container:nth-child(n+2) {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.layout-mixed .tradingview-widget-container:nth-child(n+2):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  border-color: rgba(100, 181, 246, 0.3);
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  .layout-selector {
+    gap: 8px;
+  }
+
+  .layout-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 70px;
+  }
+
+  .layout-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .layout-card {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .layout-compact {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+
+  .layout-mixed {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .layout-mixed .tradingview-widget-container:nth-child(1) {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .layout-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .layout-grid,
+  .layout-card,
+  .layout-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-list .tradingview-widget-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .layout-expanded .tradingview-widget-container {
+    padding: 20px;
+  }
+}

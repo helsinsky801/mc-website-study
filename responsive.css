@@ -1,0 +1,836 @@
+/* Responsive Design - Media Queries */
+
+/* Large Desktop (1201px and up) */
+@media (min-width: 1201px) {
+  .nav-buttons {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  .hero {
+    padding: 100px 0;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Desktop (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .nav-buttons {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.3rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
+/* Tablet (481px to 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .nav-buttons {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    padding: 40px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .team-member {
+    padding: 30px 20px;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Contact Responsive */
+  .contact-hero {
+    padding: 60px 0;
+  }
+
+  .contact-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Quick Actions Responsive */
+  .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Chatbot Responsive */
+  .chatbot-container {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .chatbot-messages {
+    max-height: 60vh;
+  }
+
+  /* Layout Selector Responsive */
+  .layout-selector {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .layout-option {
+    padding: 20px;
+  }
+
+  /* Quiz Responsive */
+  .quiz-form {
+    padding: 0 5px;
+  }
+
+  .question {
+    padding: 20px 15px;
+  }
+
+  label {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  .hamburger-popup-content {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .hamburger-nav-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hamburger-nav-btn {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (361px to 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 98%;
+    padding: 0 5px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .hero-stats {
+    gap: 15px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-visual {
+    padding: 30px 15px;
+  }
+
+  .trading-chart {
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 25px 15px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-member {
+    padding: 25px 15px;
+  }
+
+  .member-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    padding: 60px 0;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    gap: 12px;
+  }
+
+  /* Contact Mobile */
+  .contact-hero {
+    padding: 40px 0;
+  }
+
+  .contact-hero-title {
+    font-size: 2rem;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .additional-contact {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Quick Actions Mobile */
+  .quick-actions {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .quick-action-card {
+    padding: 20px;
+  }
+
+  /* Chatbot Mobile */
+  .chatbot-container {
+    margin: 0 5px;
+  }
+
+  .chatbot-messages {
+    max-height: 50vh;
+  }
+
+  .chatbot-input {
+    padding: 12px;
+  }
+
+  /* Layout Selector Mobile */
+  .layout-selector {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .layout-option {
+    padding: 15px;
+  }
+
+  .layout-option h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Quiz Mobile */
+  .question {
+    padding: 18px 12px;
+    margin-bottom: 18px;
+  }
+
+  .question p {
+    font-size: 17px;
+  }
+
+  label {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .quiz-form button[type="submit"] {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  /* Hamburger Menu Mobile */
+  .hamburger-menu {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hamburger-line {
+    height: 2px;
+  }
+
+  .hamburger-popup-content {
+    width: 95%;
+    max-width: 320px;
+    padding: 30px 20px;
+  }
+
+  .hamburger-nav-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Auth Popup Mobile */
+  .auth-popup {
+    width: 95%;
+    max-width: 350px;
+    padding: 25px 20px;
+  }
+
+  .auth-popup h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-form input {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+
+  .auth-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Popup Mobile */
+  .popup-content {
+    width: 95%;
+    max-width: 350px;
+    padding: 25px 20px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+  }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .container {
+    width: 100%;
+    padding: 0 3px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .feature-card {
+    padding: 20px 12px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .team-member {
+    padding: 20px 12px;
+  }
+
+  .member-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.1rem;
+  }
+
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta p {
+    font-size: 0.95rem;
+  }
+
+  .popup-content {
+    width: 98%;
+    max-width: 320px;
+    padding: 20px 15px;
+  }
+
+  .popup-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .close-btn {
+    top: 8px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .hamburger-popup-content {
+    width: 98%;
+    max-width: 300px;
+    padding: 25px 15px;
+  }
+
+  .hamburger-nav-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .question {
+    padding: 15px 10px;
+  }
+
+  .question p {
+    font-size: 16px;
+  }
+
+  label {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .quiz-form button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .hamburger-menu,
+  .hamburger-popup,
+  .popup,
+  .chatbot-container,
+  .auth-popup {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .glass-card,
+  .popup-content,
+  .hamburger-popup-content {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .hero,
+  .features,
+  .team,
+  .cta {
+    page-break-inside: avoid;
+  }
+
+  .feature-card,
+  .team-member {
+    break-inside: avoid;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid black !important;
+  }
+
+  .btn-primary {
+    background: black !important;
+    color: white !important;
+    border: 2px solid black !important;
+  }
+
+  .btn-secondary {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+  }
+
+  .nav-btn {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+  }
+
+  .nav-btn:hover,
+  .nav-btn.active {
+    background: black !important;
+    color: white !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-float,
+  .animate-floating,
+  .animate-pulse,
+  .animate-spin,
+  .animate-bounce,
+  .animate-wave,
+  .animate-breathing,
+  .animate-glitch,
+  .animate-neonPulse,
+  .animate-holographic,
+  .animate-rainbow,
+  .animate-typing,
+  .animate-floating3D,
+  .animate-interactiveFloat,
+  .animate-morphShape,
+  .animate-pulseCard,
+  .animate-pulseDot,
+  .animate-counterPulse,
+  .animate-floatingCard {
+    animation: none !important;
+  }
+
+  .hover-lift:hover,
+  .hover-glow:hover,
+  .hover-scale:hover,
+  .hover-rotate:hover {
+    transform: none !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%) !important;
+    color: #e0e0e0 !important;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .popup-content,
+  .hamburger-popup-content {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%) !important;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e0e0e0 !important;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    background: rgba(100, 181, 246, 0.05) !important;
+    border-color: #64b5f6 !important;
+  }
+}
+
+/* Orientation Changes */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    padding: 30px 0;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .features,
+  .team,
+  .cta {
+    padding: 40px 0;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hover-lift:hover,
+  .hover-glow:hover,
+  .hover-scale:hover,
+  .hover-rotate:hover {
+    transform: none !important;
+  }
+
+  .nav-btn,
+  .btn-primary,
+  .btn-secondary,
+  .hamburger-nav-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .close-btn,
+  .hamburger-close-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  label {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-title,
+  .section-title {
+    text-shadow:
+      0 2px 4px rgba(0,0,0,0.5),
+      0 0 20px rgba(100, 181, 246, 0.3);
+  }
+
+  .glass-card {
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.3);
+  }
+}
+
+/* Focus Visible for Accessibility */
+@media (prefers-reduced-motion: no-preference) {
+  .nav-btn:focus-visible,
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .hamburger-nav-btn:focus-visible,
+  .close-btn:focus-visible,
+  .hamburger-close-btn:focus-visible {
+    outline: 2px solid #64b5f6;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(100, 181, 246, 0.2);
+  }
+
+  .form-group input:focus-visible,
+  .form-group textarea:focus-visible,
+  .form-group select:focus-visible {
+    outline: 2px solid #64b5f6;
+    outline-offset: 2px;
+  }
+}

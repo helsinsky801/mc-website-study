@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chatbot MKG Capital Group</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(25, 118, 210, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(100, 181, 246, 0.08) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(100, 181, 246, 0.03) 0%, transparent 50%, rgba(25, 118, 210, 0.03) 100%);
+      background-size: 200% 200%, 200% 200%, 300% 300%;
+      animation: dynamicBackground 20s ease-in-out infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    @keyframes dynamicBackground {
+      0%, 100% {
+        background-position: 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.8;
+      }
+      25% {
+        background-position: 100% 100%, 100% 100%, 100% 100%;
+        opacity: 1;
+      }
+      50% {
+        background-position: 200% 200%, 200% 200%, 200% 200%;
+        opacity: 0.9;
+      }
+      75% {
+        background-position: 300% 300%, 300% 300%, 300% 300%;
+        opacity: 1;
+      }
+    }
+
+    /* Enhanced floating geometric shapes with 3D effects */
+    .floating-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+
+    .shape {
+      position: absolute;
+      opacity: 0.08;
+      animation: floatShape3D 20s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+
+    .shape:nth-child(1) {
+      top: 10%;
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #64b5f6, #1976d2, #0d47a1);
+      border-radius: 50%;
+      animation-delay: 0s;
+      box-shadow: 0 0 30px rgba(100, 181, 246, 0.3);
+    }
+
+    .shape:nth-child(2) {
+      top: 20%;
+      right: 15%;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #1976d2, #0d47a1, #1565c0);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation-delay: 3s;
+      box-shadow: 0 0 25px rgba(25, 118, 210, 0.3);
+    }
+
+    .shape:nth-child(3) {
+      bottom: 30%;
+      left: 20%;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(45deg, #64b5f6, #42a5f5, #1976d2);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      animation-delay: 6s;
+      box-shadow: 0 0 35px rgba(66, 165, 245, 0.3);
+    }
+
+    .shape:nth-child(4) {
+      top: 60%;
+      right: 10%;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #1976d2, #1565c0, #0d47a1);
+      border-radius: 50%;
+      animation-delay: 9s;
+      box-shadow: 0 0 20px rgba(21, 101, 192, 0.3);
+    }
+
+    .shape:nth-child(5) {
+      bottom: 20%;
+      left: 60%;
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(45deg, #64b5f6, #2196f3, #42a5f5);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      animation-delay: 12s;
+      box-shadow: 0 0 28px rgba(33, 150, 243, 0.3);
+    }
+
+    .shape:nth-child(6) {
+      top: 40%;
+      left: 70%;
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(45deg, #42a5f5, #64b5f6, #1976d2);
+      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+      animation-delay: 15s;
+      box-shadow: 0 0 22px rgba(66, 165, 245, 0.3);
+    }
+
+    @keyframes floatShape3D {
+      0%, 100% {
+        transform: translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 0.08;
+      }
+      25% {
+        transform: translateY(-30px) translateZ(20px) rotateX(15deg) rotateY(45deg) rotateZ(90deg) scale(1.2);
+        opacity: 0.15;
+      }
+      50% {
+        transform: translateY(-60px) translateZ(-10px) rotateX(-10deg) rotateY(90deg) rotateZ(180deg) scale(0.9);
+        opacity: 0.12;
+      }
+      75% {
+        transform: translateY(-30px) translateZ(15px) rotateX(20deg) rotateY(135deg) rotateZ(270deg) scale(1.1);
+        opacity: 0.18;
+      }
+    }
+
+    header {
+      background: #000000;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      border-radius: 0 0 20px 20px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.1), transparent);
+      animation: headerShine 3s ease-in-out infinite;
+    }
+
+    @keyframes headerShine {
+      0%, 100% { left: -100%; }
+      50% { left: 100%; }
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      background: linear-gradient(135deg, #64b5f6 0%, #1976d2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: textGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      from { text-shadow: 0 0 10px rgba(100, 181, 246, 0.5); }
+      to { text-shadow: 0 0 20px rgba(100, 181, 246, 0.8), 0 0 30px rgba(100, 181, 246, 0.6); }
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      margin-top: 0.5rem;
+      font-weight: 500;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 2rem auto;
+      background: #000000;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border-radius: 25px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+      min-height: 700px;
+    }
+
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(100, 181, 246, 0.05), rgba(25, 118, 210, 0.05));
+      pointer-events: none;
+    }
+
+    #chat-window {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin-bottom: 1.5rem;
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      scrollbar-width: thin;
+      scrollbar-color: #555 #333;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    #chat-window::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #chat-window::-webkit-scrollbar-track {
+      background: #333;
+      border-radius: 3px;
+    }
+
+    #chat-window::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 3px;
+    }
+
+    #chat-window::-webkit-scrollbar-thumb:hover {
+      background: #666;
+    }
+
+    .message {
+      margin-bottom: 1.5rem;
+      max-width: 75%;
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+      clear: both;
+      position: relative;
+      animation: messageSlideIn 0.4s ease-out;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    @keyframes messageSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .message::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+
+    .user-message {
+      background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+      color: white;
+      float: right;
+      text-align: right;
+      border-bottom-right-radius: 5px;
+      box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+    }
+
+    .user-message::before {
+      right: 20px;
+      border-top: 8px solid #64b5f6;
+    }
+
+    .bot-message {
+      background: #000000;
+      color: #e0e0e0;
+      float: left;
+      text-align: left;
+      border-bottom-left-radius: 5px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .bot-message::before {
+      left: 20px;
+      border-top: 8px solid #000000;
+    }
+
+    .message-icon {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .user-message .message-icon {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .bot-message .message-icon {
+      color: #64b5f6;
+    }
+
+    form {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      font-size: 1rem;
+      outline: none;
+      color: #e0e0e0;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    input[type="text"]:focus {
+      border-color: #64b5f6;
+      background: rgba(100, 181, 246, 0.1);
+      box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.2);
+      transform: scale(1.02);
+    }
+
+    input[type="text"]::placeholder {
+      color: #b0b0b0;
+    }
+
+    button {
+      background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 28px rgba(25, 118, 210, 0.6);
+    }
+
+    button:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger-menu {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hamburger-line {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .hamburger-menu.open .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.open .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-menu.open .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Popup Menu Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup.show {
+      display: flex;
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 300px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-popup .popup-content {
+      padding: 1rem;
+      max-width: 280px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .menu-items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .menu-item.active {
+      background-color: #004080;
+      color: white;
+    }
+
+    .menu-item.active:hover {
+      background-color: #003060;
+    }
+
+    .menu-icon {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Floating Chatbot Toggle */
+    .chatbot-toggle {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(25, 118, 210, 0.4);
+      transition: all 0.3s ease;
+      z-index: 1001;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .chatbot-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(25, 118, 210, 0.6);
+    }
+
+    .chatbot-toggle:active {
+      transform: scale(0.95);
+    }
+
+    /* Minimize chatbot */
+    .chatbot-minimized main {
+      display: none;
+    }
+
+    .chatbot-minimized .chatbot-toggle {
+      display: flex;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      display: none;
+      font-style: italic;
+      color: #b0b0b0;
+      padding: 0.5rem 1rem;
+      animation: typingPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes typingPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    /* Message timestamp */
+    .message-time {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    /* Ultra Cool Welcome Animation Styles */
+    .welcome-message {
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    .welcome-message::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.4), rgba(255, 255, 255, 0.2), rgba(100, 181, 246, 0.4), transparent);
+      animation: welcomeShine 3s ease-in-out;
+      z-index: 1;
+    }
+
+    .welcome-message::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(100, 181, 246, 0.1) 0%, transparent 70%);
+      animation: backgroundPulse 4s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes welcomeShine {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    @keyframes backgroundPulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.05); }
+    }
+
+    .typing-effect {
+      border-right: 3px solid #64b5f6;
+      animation: blink 1s infinite, rainbowBorder 3s ease-in-out infinite;
+      white-space: pre-wrap;
+      background: linear-gradient(45deg, #05788a, #47b4ea, #0d47a1, #64b5f6);
+      background-size: 400% 400%;
+      animation: rainbowText 3s ease infinite, blink 1s infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @keyframes blink {
+      0%, 50% { border-color: #64b5f6; opacity: 1; }
+      51%, 100% { border-color: transparent; opacity: 0.8; }
+    }
+
+    @keyframes rainbowText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .welcome-icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      display: block;
+      animation: iconSuperBounce 2s ease-in-out, iconRotate 4s linear infinite, iconGlow 2s ease-in-out infinite alternate;
+      text-shadow: 0 0 20px rgba(100, 181, 246, 0.8);
+    }
+
+    @keyframes iconSuperBounce {
+      0% { transform: translateY(0) scale(1); }
+      10% { transform: translateY(-20px) scale(1.2) rotate(5deg); }
+      20% { transform: translateY(-10px) scale(1.1) rotate(-3deg); }
+      30% { transform: translateY(-25px) scale(1.3) rotate(8deg); }
+      40% { transform: translateY(-5px) scale(1.05) rotate(-2deg); }
+      50% { transform: translateY(-30px) scale(1.4) rotate(10deg); }
+      60% { transform: translateY(-8px) scale(1.1) rotate(-4deg); }
+      70% { transform: translateY(-20px) scale(1.2) rotate(6deg); }
+      80% { transform: translateY(-3px) scale(1.02) rotate(-1deg); }
+      90% { transform: translateY(-15px) scale(1.15) rotate(3deg); }
+      100% { transform: translateY(0) scale(1) rotate(0deg); }
+    }
+
+    @keyframes iconRotate {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    @keyframes iconGlow {
+      from { filter: drop-shadow(0 0 5px rgba(100, 181, 246, 0.5)); }
+      to { filter: drop-shadow(0 0 20px rgba(100, 181, 246, 1)); }
+    }
+
+    .welcome-features {
+      margin-top: 1rem;
+      padding: 0;
+      list-style: none;
+      perspective: 1000px;
+    }
+
+    .welcome-features li {
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateX(-50px) rotateY(-90deg);
+      animation: feature3DSlideIn 1s ease-out forwards;
+      background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(25, 118, 210, 0.1));
+      border-radius: 8px;
+      padding: 0.5rem;
+      border: 1px solid rgba(100, 181, 246, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .welcome-features li:hover {
+      transform: translateX(0) rotateY(0deg) scale(1.05);
+      box-shadow: 0 5px 15px rgba(100, 181, 246, 0.3);
+    }
+
+    .welcome-features li:nth-child(1) { animation-delay: 1.5s; }
+    .welcome-features li:nth-child(2) { animation-delay: 1.8s; }
+    .welcome-features li:nth-child(3) { animation-delay: 2.1s; }
+    .welcome-features li:nth-child(4) { animation-delay: 2.4s; }
+    .welcome-features li:nth-child(5) { animation-delay: 2.7s; }
+    .welcome-features li:nth-child(6) { animation-delay: 3s; }
+
+    @keyframes feature3DSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px) rotateY(-90deg) scale(0.8);
+      }
+      50% {
+        opacity: 0.7;
+        transform: translateX(-10px) rotateY(-20deg) scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0deg) scale(1);
+      }
+    }
+
+    .feature-icon {
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+      animation: iconFloat 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .welcome-cta {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(25, 118, 210, 0.1));
+      border-radius: 15px;
+      border: 2px solid rgba(100, 181, 246, 0.3);
+      animation: ctaSuperPulse 2s ease-in-out infinite, ctaRainbow 4s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .welcome-cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(100, 181, 246, 0.3), transparent);
+      animation: ctaRotate 3s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes ctaSuperPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 0 15px rgba(100, 181, 246, 0);
+        transform: scale(1.02);
+      }
+    }
+
+    @keyframes ctaRainbow {
+      0% { border-color: rgba(100, 181, 246, 0.3); }
+      25% { border-color: rgba(255, 193, 7, 0.3); }
+      50% { border-color: rgba(76, 175, 80, 0.3); }
+      75% { border-color: rgba(156, 39, 176, 0.3); }
+      100% { border-color: rgba(100, 181, 246, 0.3); }
+    }
+
+    @keyframes ctaRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Interactive particle system */
+    .interactive-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .interactive-particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: radial-gradient(circle, rgba(100, 181, 246, 0.8) 0%, rgba(25, 118, 210, 0.4) 100%);
+      border-radius: 50%;
+      animation: interactiveParticleFloat 8s ease-in-out infinite;
+      box-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    }
+
+    .interactive-particle:nth-child(1) { top: 15%; left: 15%; animation-delay: 0s; }
+    .interactive-particle:nth-child(2) { top: 25%; right: 20%; animation-delay: 1s; }
+    .interactive-particle:nth-child(3) { bottom: 35%; left: 25%; animation-delay: 2s; }
+    .interactive-particle:nth-child(4) { top: 45%; right: 15%; animation-delay: 3s; }
+    .interactive-particle:nth-child(5) { bottom: 25%; left: 70%; animation-delay: 4s; }
+    .interactive-particle:nth-child(6) { top: 65%; right: 25%; animation-delay: 5s; }
+    .interactive-particle:nth-child(7) { bottom: 15%; left: 45%; animation-delay: 6s; }
+    .interactive-particle:nth-child(8) { top: 75%; right: 35%; animation-delay: 7s; }
+
+    @keyframes interactiveParticleFloat {
+      0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.3;
+      }
+      25% {
+        transform: translateY(-30px) translateX(20px) scale(1.2);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-60px) translateX(-15px) scale(0.8);
+        opacity: 0.6;
+      }
+      75% {
+        transform: translateY(-30px) translateX(-25px) scale(1.1);
+        opacity: 0.9;
+      }
+    }
+
+    /* Morphing message bubbles */
+    .message.morphing {
+      animation: messageMorph 0.6s ease-out;
+    }
+
+    @keyframes messageMorph {
+      0% {
+        border-radius: 50%;
+        transform: scale(0) rotate(180deg);
+        opacity: 0;
+      }
+      50% {
+        border-radius: 25px;
+        transform: scale(1.1) rotate(90deg);
+        opacity: 0.7;
+      }
+      100% {
+        border-radius: 20px;
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    /* Enhanced typing indicator */
+    .typing-indicator {
+      display: none;
+      font-style: italic;
+      color: #b0b0b0;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(25, 118, 210, 0.1));
+      border-radius: 20px;
+      border: 1px solid rgba(100, 181, 246, 0.2);
+      animation: typingPulse 1.5s ease-in-out infinite, typingGlow 2s ease-in-out infinite alternate;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .typing-indicator::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.2), transparent);
+      animation: typingShimmer 2s ease-in-out infinite;
+    }
+
+    @keyframes typingPulse {
+      0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+    }
+
+    @keyframes typingGlow {
+      from {
+        box-shadow: 0 0 5px rgba(100, 181, 246, 0.3);
+      }
+      to {
+        box-shadow: 0 0 20px rgba(100, 181, 246, 0.6), 0 0 30px rgba(100, 181, 246, 0.4);
+      }
+    }
+
+    @keyframes typingShimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    /* Advanced hover effects */
+    .message:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4), 0 0 20px rgba(100, 181, 246, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .user-message:hover {
+      background: linear-gradient(135deg, #1565c0 0%, #42a5f5 100%);
+    }
+
+    .bot-message:hover {
+      background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(25, 118, 210, 0.2));
+      border-color: rgba(100, 181, 246, 0.4);
+    }
+
+    /* Staggered animation for multiple messages */
+    .message:nth-child(odd) {
+      animation: messageSlideIn 0.4s ease-out, messageStagger 0.6s ease-out;
+    }
+
+    .message:nth-child(even) {
+      animation: messageSlideIn 0.4s ease-out 0.2s both, messageStagger 0.6s ease-out 0.2s both;
+    }
+
+    @keyframes messageStagger {
+      0% {
+        transform: translateX(-20px);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Scroll-triggered animations */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Enhanced button animations */
+    button:hover {
+      animation: buttonPulse 0.6s ease-in-out;
+    }
+
+    @keyframes buttonPulse {
+      0%, 100% {
+        transform: translateY(-3px) scale(1.05);
+      }
+      50% {
+        transform: translateY(-5px) scale(1.08);
+      }
+    }
+
+    /* Magnetic effect for interactive elements */
+    .magnetic {
+      transition: transform 0.3s ease;
+    }
+
+    .magnetic:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* Liquid button effect */
+    .liquid-button {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liquid-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .liquid-button:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    /* Neon glow effects */
+    .neon-glow {
+      text-shadow:
+        0 0 5px rgba(100, 181, 246, 0.5),
+        0 0 10px rgba(100, 181, 246, 0.5),
+        0 0 15px rgba(100, 181, 246, 0.5),
+        0 0 20px rgba(100, 181, 246, 0.5);
+      animation: neonFlicker 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes neonFlicker {
+      from {
+        text-shadow:
+          0 0 5px rgba(100, 181, 246, 0.5),
+          0 0 10px rgba(100, 181, 246, 0.5),
+          0 0 15px rgba(100, 181, 246, 0.5),
+          0 0 20px rgba(100, 181, 246, 0.5);
+      }
+      to {
+        text-shadow:
+          0 0 5px rgba(100, 181, 246, 0.8),
+          0 0 10px rgba(100, 181, 246, 0.8),
+          0 0 15px rgba(100, 181, 246, 0.8),
+          0 0 20px rgba(100, 181, 246, 0.8);
+      }
+    }
+
+    /* 3D transform effects */
+    .message-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease;
+    }
+
+    .message-3d:hover {
+      transform: rotateX(5deg) rotateY(5deg) translateZ(10px);
+    }
+
+    /* Gradient animation */
+    .animated-gradient {
+      background: linear-gradient(-45deg, #1976d2, #64b5f6, #42a5f5, #1976d2);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      main {
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .message {
+        max-width: 85%;
+        padding: 0.75rem 1rem;
+      }
+
+      .chatbot-toggle {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chatbot MKG Capital Group</h1>
+    <p>tanya sesuai yang di tulis di bawah jak wak, di luar dari tuu dak bisa diee,, bayah nanya barang ari golak kau ku tampa nehh</p>
+    <button class="hamburger-menu" id="hamburger-menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <button class="chat-popup-btn" id="chat-popup-btn" title="Buka Chatbot">
+      💬 Chat
+    </button>
+  </header>
+
+  <section id="chatbot-commands" aria-label="Daftar Perintah Chatbot" style="margin: 2rem auto; padding: 2rem; background: rgba(100, 181, 246, 0.1); border-radius: 15px; border: 1px solid rgba(100, 181, 246, 0.3); color: #cce4ff; font-weight: 600; max-width: 900px;">
+    <h2 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 2rem; color: #64b5f6; text-align: center;">🚀 Apa yang Bisa Anda Tanyakan?</h2>
+    <p style="text-align: center; margin-bottom: 2rem; color: #b0b0b0; font-size: 1.1rem;">Tanyakan apa saja tentang trading! Berikut adalah topik-topik yang bisa Anda diskusikan dengan chatbot kami:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem;">
+      <!-- Trading Basics -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">📚 Dasar Trading</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "apa itu trading" - Pengertian trading</li>
+          <li>• "cara mulai trading" - Panduan untuk pemula</li>
+          <li>• "modal" - Kebutuhan modal minimal</li>
+          <li>• "jam trading" - Waktu operasional pasar</li>
+          <li>• "broker" - Rekomendasi broker terpercaya</li>
+        </ul>
+      </div>
+
+      <!-- Technical Analysis -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">📊 Analisis Teknikal</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "teknikal" - Indikator teknikal lengkap</li>
+          <li>• "candlestick" - Pola candlestick Jepang</li>
+          <li>• "trend" - Memahami trend pasar</li>
+          <li>• "indikator" - RSI, MACD, Bollinger Bands</li>
+          <li>• "chart pattern" - Pola grafik trading</li>
+        </ul>
+      </div>
+
+      <!-- Risk Management -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">⚠️ Manajemen Risiko</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "risiko" - Prinsip manajemen risiko</li>
+          <li>• "stop loss" - Penggunaan stop loss</li>
+          <li>• "take profit" - Strategi take profit</li>
+          <li>• "position sizing" - Penentuan ukuran posisi</li>
+          <li>• "risk reward" - Rasio risiko keuntungan</li>
+        </ul>
+      </div>
+
+      <!-- Psychology -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">🧠 Psikologi Trading</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "psikologi" - Psikologi trader sukses</li>
+          <li>• "emosi" - Mengendalikan emosi trading</li>
+          <li>• "discipline" - Kedisiplinan dalam trading</li>
+          <li>• "trading journal" - Pentingnya catatan trading</li>
+          <li>• "patience" - Kesabaran dalam trading</li>
+        </ul>
+      </div>
+
+      <!-- Market Analysis -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">🌍 Analisis Pasar</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "fundamental" - Analisis fundamental</li>
+          <li>• "forex" - Trading mata uang</li>
+          <li>• "saham" - Trading saham</li>
+          <li>• "crypto" - Trading cryptocurrency</li>
+          <li>• "komoditas" - Trading komoditas</li>
+        </ul>
+      </div>
+
+      <!-- Trading Styles -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">⏱️ Gaya Trading</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "scalping" - Trading jangka sangat pendek</li>
+          <li>• "day trading" - Trading harian</li>
+          <li>• "swing trading" - Trading beberapa hari</li>
+          <li>• "position trading" - Trading jangka panjang</li>
+          <li>• "intraday" - Trading dalam sehari</li>
+        </ul>
+      </div>
+
+      <!-- Learning Resources -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">🎓 Sumber Belajar</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "materi" - Modul pembelajaran lengkap</li>
+          <li>• "quiz" - Test pengetahuan trading</li>
+          <li>• "strategi" - Strategi trading modern</li>
+          <li>• "tools" - Tools dan platform trading</li>
+          <li>• "komunitas" - Bergabung komunitas trader</li>
+        </ul>
+      </div>
+
+      <!-- Help & Support -->
+      <div style="background: rgba(100, 181, 246, 0.05); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.2);">
+        <h3 style="color: #64b5f6; margin-top: 0; margin-bottom: 1rem; font-size: 1.3rem;">💬 Bantuan & Dukungan</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.6;">
+          <li>• "bantuan" - Panduan lengkap chatbot</li>
+          <li>• "help" - Daftar semua perintah</li>
+          <li>• "halo" - Salam dan perkenalan</li>
+          <li>• "terima kasih" - Ungkapan terima kasih</li>
+          <li>• Tanya apa saja tentang trading!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: rgba(100, 181, 246, 0.1); border-radius: 10px; border: 1px solid rgba(100, 181, 246, 0.3);">
+      <p style="margin: 0; color: #b0b0b0; font-size: 1rem;">
+        💡 <strong>Tips:</strong> Gunakan kata kunci di atas atau tanyakan pertanyaan spesifik tentang trading.
+        Chatbot kami siap membantu Anda 24/7 dengan pengetahuan trading terkini!
+      </p>
+    </div>
+  </section>
+
+  <section id="quick-access" style="margin: 2rem auto; padding: 2rem; background: rgba(100, 181, 246, 0.1); border-radius: 15px; border: 1px solid rgba(100, 181, 246, 0.3); color: #cce4ff; font-weight: 600; max-width: 900px; text-align: center;">
+    <h2 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 2rem; color: #64b5f6;">🚀 Akses Cepat</h2>
+    <p style="margin-bottom: 2rem; color: #b0b0b0; font-size: 1.1rem;">Klik tombol di bawah untuk mendapatkan tips cepat tentang trading!</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <button id="open-tips" style="background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: all 0.3s ease;">💡 Tips Trading Cepat</button>
+      <button id="open-broker" style="background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: all 0.3s ease;">🏦 Broker Terpercaya</button>
+      <button id="open-psikologi" style="background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: all 0.3s ease;">🧠 Psikologi Trading</button>
+      <button id="open-panduan" style="background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: all 0.3s ease;">🚀 Panduan Cepat</button>
+    </div>
+  </section>
+
+  <main>
+    <div id="chat-window" aria-live="polite" aria-label="Chat messages"></div>
+    <form id="chat-form" aria-label="Send message form">
+      <input type="text" id="user-input" placeholder="Tulis pesan Anda..." autocomplete="off" required />
+      <button type="submit">Kirim</button>
+    </form>
+  </main>
+
+  <!-- Floating Chatbot Toggle -->
+  <button class="chatbot-toggle" id="chatbot-toggle" title="Minimize Chatbot">−</button>
+
+  <!-- Popup Menu Navigasi -->
+  <div id="popup-menu" class="popup">
+    <div class="popup-content menu-popup">
+      <span class="close-btn" id="close-popup-menu">&times;</span>
+      <h3>Navigasi Menu</h3>
+      <div class="menu-items">
+        <button class="menu-item" data-page="index.html">
+          <span class="menu-icon">🏠</span>
+          <span>Beranda</span>
+        </button>
+        <button class="menu-item" data-page="about.html">
+          <span class="menu-icon">ℹ️</span>
+          <span>Tentang Kami</span>
+        </button>
+        <button class="menu-item" data-page="belajar-1.html">
+          <span class="menu-icon">📚</span>
+          <span>Materi Pembelajaran</span>
+        </button>
+        <button class="menu-item" data-page="quiz-1.html">
+          <span class="menu-icon">🎯</span>
+          <span>Quiz</span>
+        </button>
+        <button class="menu-item active" data-page="chatbot.html">
+          <span class="menu-icon">🤖</span>
+          <span>Chatbot</span>
+        </button>
+        <button class="menu-item" data-page="contact.html">
+          <span class="menu-icon">📞</span>
+          <span>Kontak</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Tips Trading Cepat -->
+  <div id="popup-tips" class="popup">
+    <div class="popup-content tips-popup">
+      <span class="close-btn" id="close-popup-tips">&times;</span>
+      <h3>💡 Tips Trading Cepat</h3>
+      <div class="tips-content">
+        <div class="tip-item">
+          <h4>🎯 Entry Point yang Baik</h4>
+          <p>Tunggu konfirmasi dari multiple indikator sebelum masuk posisi. Jangan FOMO!</p>
+        </div>
+        <div class="tip-item">
+          <h4>⚠️ Risk Management</h4>
+          <p>Selalu gunakan stop loss. Risk maksimal 1-2% per trade dari total modal.</p>
+        </div>
+        <div class="tip-item">
+          <h4>📊 Analisis Teknikal</h4>
+          <p>Gunakan timeframe H1 atau H4 untuk analisis utama, bukan M1 atau M5.</p>
+        </div>
+        <div class="tip-item">
+          <h4>🧠 Psikologi</h4>
+          <p>Jangan revenge trade setelah loss. Ambil break dan evaluasi strategi.</p>
+        </div>
+        <div class="tip-item">
+          <h4>💰 Money Management</h4>
+          <p>Tetapkan target profit harian/mingguan. Jangan greedy!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Info Broker -->
+  <div id="popup-broker" class="popup">
+    <div class="popup-content broker-popup">
+      <span class="close-btn" id="close-popup-broker">&times;</span>
+      <h3>🏦 Broker Terpercaya</h3>
+      <div class="broker-content">
+        <div class="broker-item">
+          <h4>IC Markets</h4>
+          <p>ECN Broker dengan spread rendah. Cocok untuk scalping dan day trading.</p>
+          <span class="broker-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="broker-item">
+          <h4>Pepperstone</h4>
+          <p>Platform MT4/MT5 cepat dengan eksekusi order yang baik.</p>
+          <span class="broker-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="broker-item">
+          <h4>XM</h4>
+          <p>Edukasi lengkap dan bonus trading. Baik untuk trader pemula.</p>
+          <span class="broker-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="broker-item">
+          <h4>FBS</h4>
+          <p>Micro lot tersedia. Deposit minimal rendah untuk pemula.</p>
+          <span class="broker-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Psikologi Trading -->
+  <div id="popup-psikologi" class="popup">
+    <div class="popup-content psikologi-popup">
+      <span class="close-btn" id="close-popup-psikologi">&times;</span>
+      <h3>🧠 Psikologi Trading</h3>
+      <div class="psikologi-content">
+        <div class="psikologi-item">
+          <h4>😨 Fear (Takut)</h4>
+          <p>Jangan takut masuk posisi saat setup sudah sempurna. Takut adalah emosi normal, tapi jangan biarkan mengontrol keputusan Anda.</p>
+        </div>
+        <div class="psikologi-item">
+          <h4>😈 Greed (Rakus)</h4>
+          <p>Jangan overtrade atau hold posisi terlalu lama hanya karena harap harga akan naik lagi. Tetapkan target profit!</p>
+        </div>
+        <div class="psikologi-item">
+          <h4>😤 Revenge (Balas Dendam)</h4>
+          <p>Jangan masuk posisi besar setelah loss hanya untuk membalas. Ini sering berakhir dengan loss yang lebih besar.</p>
+        </div>
+        <div class="psikologi-item">
+          <h4>😊 Patience (Sabar)</h4>
+          <p>Tunggu setup yang sempurna. Lebih baik tidak trade daripada trade dengan setup buruk.</p>
+        </div>
+        <div class="psikologi-item">
+          <h4>📝 Discipline (Disiplin)</h4>
+          <p>Ikuti rencana trading Anda. Jangan impulsif karena emosi sesaat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Panduan Cepat -->
+  <div id="popup-panduan" class="popup">
+    <div class="popup-content panduan-popup">
+      <span class="close-btn" id="close-popup-panduan">&times;</span>
+      <h3>🚀 Panduan Cepat Trading</h3>
+      <div class="panduan-content">
+        <div class="panduan-section">
+          <h4>📈 Langkah Awal Trading</h4>
+          <ol>
+            <li><strong>Pelajari Dasar:</strong> Pahami konsep trading, jenis pasar, dan terminologi</li>
+            <li><strong>Pilih Broker:</strong> Cari broker terpercaya dengan regulasi jelas</li>
+            <li><strong>Buka Akun Demo:</strong> Latihan tanpa risiko dengan akun demo</li>
+            <li><strong>Pelajari Analisis:</strong> Kuasai analisis teknikal dan fundamental</li>
+            <li><strong>Manajemen Risiko:</strong> Tetapkan aturan stop loss dan take profit</li>
+          </ol>
+        </div>
+        <div class="panduan-section">
+          <h4>🎯 Strategi Pemula</h4>
+          <ul>
+            <li><strong>Follow Trend:</strong> Trade sesuai arah trend utama</li>
+            <li><strong>Support & Resistance:</strong> Gunakan level psikologis</li>
+            <li><strong>Risk Management:</strong> Maksimal 1-2% per trade</li>
+            <li><strong>Consistency:</strong> Terapkan strategi secara konsisten</li>
+            <li><strong>Journal:</strong> Catat setiap trade untuk evaluasi</li>
+          </ul>
+        </div>
+        <div class="panduan-section">
+          <h4>⚠️ Kesalahan Umum Pemula</h4>
+          <ul>
+            <li>Overtrading (terlalu banyak posisi)</li>
+            <li>Tidak menggunakan stop loss</li>
+            <li>Revenge trading setelah loss</li>
+            <li>FOMO (takut ketinggalan)</li>
+            <li>Tidak memiliki rencana trading</li>
+          </ul>
+        </div>
+        <div class="panduan-cta">
+          <p>💡 <strong>Siap mulai?</strong> Kunjungi halaman Materi Pembelajaran untuk panduan lengkap!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatWindow = document.getElementById('chat-window');
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+
+    function appendMessage(text, className, isWelcome = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'message ' + className;
+
+      if (isWelcome) {
+        messageDiv.classList.add('welcome-message');
+      }
+
+      // Add icon based on message type
+      const iconSpan = document.createElement('span');
+      iconSpan.className = 'message-icon';
+      if (className === 'user-message') {
+        iconSpan.textContent = '👤';
+      } else if (className === 'bot-message') {
+        if (isWelcome) {
+          iconSpan.className = 'welcome-icon';
+          iconSpan.textContent = '🚀';
+        } else {
+          iconSpan.textContent = '🤖';
+        }
+      }
+      messageDiv.appendChild(iconSpan);
+
+      // Add text content
+      const textSpan = document.createElement('span');
+      if (isWelcome) {
+        textSpan.className = 'typing-effect';
+        typeWriter(textSpan, text, 0);
+      } else {
+        textSpan.textContent = text;
+      }
+      messageDiv.appendChild(textSpan);
+
+      // Add features list for welcome message
+      if (isWelcome) {
+        const featuresList = document.createElement('ul');
+        featuresList.className = 'welcome-features';
+
+        const features = [
+          { icon: '📚', text: 'Materi Pembelajaran Lengkap' },
+          { icon: '🎯', text: 'Quiz Interaktif' },
+          { icon: '👥', text: 'Komunitas Trader Pro' },
+          { icon: '📈', text: 'Strategi Trading Modern' },
+          { icon: '🛠️', text: 'Tools & Platform Terbaik' },
+          { icon: '💬', text: 'Bantuan 24/7' }
+        ];
+
+        features.forEach(feature => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span class="feature-icon">${feature.icon}</span>${feature.text}`;
+          featuresList.appendChild(li);
+        });
+
+        messageDiv.appendChild(featuresList);
+
+        // Add CTA section
+        const ctaDiv = document.createElement('div');
+        ctaDiv.className = 'welcome-cta';
+        ctaDiv.innerHTML = `
+          <strong>💡 Tips:</strong> Mulai dengan mengetik "materi" untuk melihat modul pembelajaran,
+          atau "quiz" untuk menguji pengetahuan Anda!
+        `;
+        messageDiv.appendChild(ctaDiv);
+      }
+
+      chatWindow.appendChild(messageDiv);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    // Typewriter effect function
+    function typeWriter(element, text, index) {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        setTimeout(() => typeWriter(element, text, index + 1), 50);
+      } else {
+        // Remove cursor after typing is complete
+        setTimeout(() => {
+          element.classList.remove('typing-effect');
+        }, 1000);
+      }
+    }
+
+    // Welcome message when page loads
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        appendMessage('🎉 Selamat Datang di Chatbot MKG Capital Group!\n\n🚀 Saya adalah asisten AI canggih yang siap membantu Anda menguasai dunia trading!\n\n💡 Dengan teknologi terkini dan pengetahuan mendalam, saya akan memandu Anda melalui perjalanan trading yang sukses.', 'bot-message', true);
+      }, 500);
+    });
+
+    function botResponse(userText) {
+      // Enhanced comprehensive rule-based responses
+      const text = userText.toLowerCase();
+
+      // Greeting responses
+      if (text.includes('halo') || text.includes('hi') || text.includes('hai') || text.includes('selamat') || text.includes('pagi') || text.includes('siang') || text.includes('sore') || text.includes('malam')) {
+        return 'Halo! 👋 Selamat datang di MKG Capital Group! Saya adalah asisten AI yang siap membantu Anda menguasai dunia trading. Ada yang bisa saya bantu hari ini?';
+      }
+
+      // Basic trading questions
+      if (text.includes('apa itu trading') || text.includes('trading itu apa') || text.includes('pengertian trading')) {
+        return `📈 **Apa itu Trading?**
+
+Trading adalah kegiatan membeli dan menjual instrumen keuangan seperti saham, forex, komoditas, atau crypto dengan tujuan mendapatkan keuntungan dari perubahan harga.
+
+**Jenis Trading Utama:**
+• **Forex Trading** - Trading mata uang
+• **Stock Trading** - Trading saham
+• **Crypto Trading** - Trading cryptocurrency
+• **Commodity Trading** - Trading komoditas
+
+💡 **Tips untuk Pemula:** Mulai dengan modal kecil dan pelajari dasar-dasarnya terlebih dahulu!`;
+      }
+
+      if (text.includes('cara mulai trading') || text.includes('mulai trading') || text.includes('belajar trading')) {
+        return `🚀 **Cara Mulai Trading untuk Pemula:**
+
+**1. Pelajari Dasar-Dasar:**
+• Pahami konsep trading dan pasar keuangan
+• Pelajari analisis teknikal dan fundamental
+• Pahami manajemen risiko
+
+**2. Pilih Platform:**
+• Pilih broker terpercaya dengan regulasi yang jelas
+• Mulai dengan akun demo untuk latihan
+• Gunakan platform yang user-friendly
+
+**3. Mulai Kecil:**
+• Gunakan modal yang tidak terlalu besar
+• Tetapkan target profit dan stop loss
+• Belajar dari kesalahan
+
+**4. Edukasi Berkelanjutan:**
+• Ikuti kursus dan webinar
+• Bergabung komunitas trader
+• Baca buku trading terpercaya
+
+💡 **Rekomendasi:** Mulai dengan akun demo dulu untuk belajar tanpa risiko!`;
+      }
+
+      // Technical Analysis
+      if (text.includes('analisis teknikal') || text.includes('technical analysis') || text.includes('indikator')) {
+        return `📊 **Analisis Teknikal dalam Trading:**
+
+**Indikator Utama:**
+• **Moving Average (MA)** - Rata-rata harga dalam periode tertentu
+• **RSI (Relative Strength Index)** - Mengukur momentum harga (0-100)
+• **MACD** - Perbedaan antara MA cepat dan lambat
+• **Bollinger Bands** - Band atas/bawah berdasarkan volatilitas
+• **Stochastic** - Membandingkan harga penutupan dengan range harga
+
+**Chart Patterns:**
+• **Head & Shoulders** - Pola reversal
+• **Double Top/Bottom** - Pola reversal
+• **Triangle** - Pola continuation
+• **Flag & Pennant** - Pola continuation
+
+💡 **Tips:** Gabungkan beberapa indikator untuk konfirmasi yang lebih baik!`;
+      }
+
+      if (text.includes('candlestick') || text.includes('candle') || text.includes('pola lilin')) {
+        return `🕯️ **Pola Candlestick Jepang:**
+
+**Pola Dasar:**
+• **Marubozu** - Candle tanpa shadow (bullish/bearish)
+• **Doji** - Open = Close (ketidakpastian pasar)
+• **Hammer** - Shadow bawah panjang (reversal bullish)
+• **Shooting Star** - Shadow atas panjang (reversal bearish)
+
+**Pola Reversal:**
+• **Morning Star** - 3 candle: bearish → doji → bullish
+• **Evening Star** - 3 candle: bullish → doji → bearish
+• **Bullish Engulfing** - Candle bullish menelan bearish
+• **Bearish Engulfing** - Candle bearish menelan bullish
+
+💡 **Tips:** Candlestick memberikan sinyal psikologi trader dalam pasar!`;
+      }
+
+      // Risk Management
+      if (text.includes('risiko') || text.includes('risk') || text.includes('stop loss') || text.includes('take profit')) {
+        return `⚠️ **Manajemen Risiko dalam Trading:**
+
+**Prinsip Utama:**
+• **Risk per Trade:** Maksimal 1-2% dari total modal
+• **Risk-Reward Ratio:** Minimal 1:2 (risiko:keuntungan)
+• **Position Sizing:** Sesuaikan ukuran posisi dengan risiko
+
+**Tools Penting:**
+• **Stop Loss (SL)** - Batas kerugian otomatis
+• **Take Profit (TP)** - Batas keuntungan otomatis
+• **Trailing Stop** - Stop loss yang mengikuti harga
+
+**Contoh Perhitungan:**
+Modal: Rp 10.000.000
+Risk per trade: 1% = Rp 100.000
+Jika entry di harga 100, SL di 95 → Lot size = 100.000 / (100-95) = 20 lot
+
+💡 **Tips:** Selalu gunakan stop loss untuk melindungi modal Anda!`;
+      }
+
+      // Psychology
+      if (text.includes('psikologi') || text.includes('mental') || text.includes('emosi') || text.includes('discipline')) {
+        return `🧠 **Psikologi Trading yang Sehat:**
+
+**Emosi yang Perlu Dikendalikan:**
+• **Fear (Takut)** - Menghindari kerugian yang sebenarnya belum terjadi
+• **Greed (Rakus)** - Mengambil posisi terlalu besar atau holding terlalu lama
+• **Hope (Harapan)** - Menunggu harga kembali normal setelah SL
+• **Revenge (Balas Dendam)** - Trading emosional setelah loss
+
+**Kunci Sukses:**
+• **Discipline** - Ikuti rencana trading
+• **Patience** - Tunggu setup yang sempurna
+• **Consistency** - Terapkan strategi secara konsisten
+• **Learning** - Belajar dari setiap kesalahan
+
+**Tips Mental:**
+• Tetapkan target harian/mingguan
+• Catat semua trade dalam journal
+• Ambil break saat emosi tinggi
+• Fokus pada proses, bukan hasil
+
+💡 **Fakta:** 90% trader gagal karena masalah psikologi, bukan strategi!`;
+      }
+
+      // Market Analysis
+      if (text.includes('fundamental') || text.includes('fundamental analysis')) {
+        return `📊 **Analisis Fundamental:**
+
+**Faktor yang Dianalisis:**
+• **Ekonomi Makro:** GDP, Inflasi, Suku Bunga, Unemployment
+• **Data Perusahaan:** Laporan Keuangan, EPS, ROE, Debt Ratio
+• **Berita & Event:** Earnings Report, Merger, Regulatory Changes
+• **Sentimen Pasar:** News, Social Media, Analyst Ratings
+
+**Tools Fundamental:**
+• **Economic Calendar** - Jadwal rilis data ekonomi
+• **Financial Statements** - Laporan keuangan perusahaan
+• **News Aggregator** - Sumber berita terpercaya
+• **Analyst Reports** - Research dari analis profesional
+
+**Contoh Penggunaan:**
+• FOMC Meeting → Dapat mempengaruhi USD
+• Apple Earnings → Mempengaruhi harga saham AAPL
+• CPI Data → Indikator inflasi dan kebijakan moneter
+
+💡 **Tips:** Fundamental memberikan arah jangka panjang, teknikal untuk entry timing!`;
+      }
+
+      if (text.includes('jam trading') || text.includes('sesi') || text.includes('waktu trading')) {
+        return `🕐 **Jam Trading Pasar Keuangan:**
+
+**Forex Market (24/5):**
+• **Sydney Session:** 21:00 - 06:00 WIB
+• **Tokyo Session:** 01:00 - 10:00 WIB
+• **London Session:** 15:00 - 00:00 WIB
+• **New York Session:** 20:00 - 05:00 WIB
+
+**Stock Market:**
+• **NYSE/NASDAQ:** 21:30 - 04:00 WIB (Senin-Jumat)
+• **IDX (Indonesia):** 09:00 - 15:00 WIB (Senin-Jumat)
+
+**Crypto Market:**
+• **24/7 Trading** - Tidak ada jam istirahat
+• **Liquidity Tertinggi:** 13:00 - 21:00 WIB
+
+💡 **Tips:** Trading saat overlap session memberikan volatilitas dan volume terbaik!`;
+      }
+
+      // Common Questions
+      if (text.includes('modal') || text.includes('kapital') || text.includes('uang') || text.includes('berapa')) {
+        return `💰 **Modal Minimal untuk Trading:**
+
+**Forex Trading:**
+• **Minimal:** Rp 500.000 - Rp 1.000.000
+• **Rekomendasi:** Rp 5.000.000 untuk manajemen risiko yang baik
+
+**Stock Trading:**
+• **Minimal:** Rp 100.000 (1 lot saham)
+• **Rekomendasi:** Rp 10.000.000 untuk diversifikasi
+
+**Crypto Trading:**
+• **Minimal:** Rp 100.000
+• **Rekomendasi:** Rp 1.000.000 untuk berbagai coin
+
+**Faktor Penting:**
+• **Risk per Trade:** 1-2% dari modal
+• **Emergency Fund:** Sisakan dana darurat 3-6 bulan
+• **Education Budget:** Alokasikan untuk kursus dan tools
+
+💡 **Tips:** Mulai kecil, fokus belajar dulu daripada modal besar tapi ilmu minim!`;
+      }
+
+      if (text.includes('broker') || text.includes('platform trading') || text.includes('rekomendasi broker')) {
+        return `🏦 **Rekomendasi Broker Terpercaya:**
+
+**Kriteria Broker Bagus:**
+• ✅ Regulasi resmi (BAPPEBTI untuk Indonesia)
+• ✅ Spread kompetitif
+• ✅ Platform user-friendly
+• ✅ Edukasi dan research tools
+• ✅ Customer support 24/5
+• ✅ Deposit/withdrawal mudah
+
+**Broker Forex Populer:**
+• **IC Markets** - ECN broker, spread rendah
+• **Pepperstone** - Platform MT4/MT5 cepat
+• **XM** - Bonus dan edukasi lengkap
+• **FBS** - Micro lot untuk pemula
+
+**Broker Lokal Indonesia:**
+• **Phillip Sekuritas** - Broker saham terpercaya
+• **MNC Sekuritas** - Platform mudah digunakan
+• **BCA Sekuritas** - Didukung bank besar
+
+💡 **Tips:** Pilih broker dengan regulasi jelas dan test platform demo dulu!`;
+      }
+
+      // Educational Content
+      if (text.includes('trend') || text.includes('arah') || text.includes('uptrend') || text.includes('downtrend')) {
+        return `📈 **Memahami Trend dalam Trading:**
+
+**Jenis Trend:**
+• **Uptrend (Naik):** Higher Highs & Higher Lows
+• **Downtrend (Turun):** Lower Highs & Lower Lows
+• **Sideways (Rata):** Tidak ada arah jelas
+
+**Cara Mengidentifikasi:**
+• **Support & Resistance:** Level psikologis harga
+• **Moving Averages:** MA 50, 100, 200 sebagai dynamic S/R
+• **Trend Lines:** Garis yang menghubungkan swing points
+
+**Strategi Trading Trend:**
+• **Trend Following:** Trade sesuai arah trend
+• **Counter Trend:** Trade melawan trend (high risk)
+• **Breakout:** Masuk saat harga break level penting
+
+**Tips Sukses:**
+• Trade with the trend, not against it
+• Gunakan timeframe yang sesuai
+• Konfirmasi dengan multiple timeframe analysis
+
+💡 **Fakta:** 70% pasar dalam kondisi trending, sisanya sideways!`;
+      }
+
+      if (text.includes('scalping') || text.includes('day trading') || text.includes('swing') || text.includes('position')) {
+        return `⏱️ **Style Trading Berdasarkan Timeframe:**
+
+**1. Scalping (1-5 menit):**
+• Target profit kecil per trade
+• Banyak trade dalam sehari
+• Membutuhkan fokus tinggi
+• Cocok untuk trader profesional
+
+**2. Day Trading (Intraday):**
+• Open dan close dalam 1 hari
+• Tidak hold posisi overnight
+• Analisis teknikal harian
+• Risiko psikologis lebih rendah
+
+**3. Swing Trading (Harian/Mingguan):**
+• Hold posisi 1-7 hari
+• Menggunakan analisis teknikal mingguan
+• Lebih sedikit stress
+• Cocok untuk trader pemula
+
+**4. Position Trading (Mingguan/Bulanan):**
+• Hold posisi berbulan-bulan
+• Fokus analisis fundamental
+• Membutuhkan patience tinggi
+• Risiko psikologis minimal
+
+💡 **Tips:** Pilih style yang sesuai dengan personality dan waktu Anda!`;
+      }
+
+      // Existing responses (keeping them)
+      if (text.includes('materi')) {
+        return 'Kami menyediakan 8 modul materi pembelajaran lengkap yang bisa Anda akses di halaman Materi Pembelajaran. Apakah Anda ingin tahu lebih detail tentang modul tertentu?';
+      }
+      if (text.includes('quiz')) {
+        return 'Quiz kami terdiri dari lebih dari 80 pertanyaan untuk menguji pengetahuan Anda. Anda dapat mulai quiz di halaman Quiz. Apakah Anda ingin saya jelaskan cara mengikuti quiz?';
+      }
+      if (text.includes('komunitas')) {
+        return 'Untuk bergabung dengan komunitas trader profesional kami, silakan kunjungi halaman Kontak dan hubungi kami. Kami juga memiliki grup diskusi yang aktif.';
+      }
+      if (text.includes('strategi')) {
+        return 'Strategi trading kami mencakup analisis teknikal, manajemen risiko, dan psikologi trading. Apakah Anda ingin tahu lebih lanjut tentang salah satu strategi ini?';
+      }
+      if (text.includes('tools') || text.includes('platform')) {
+        return 'Kami menyediakan materi tentang berbagai tools dan platform trading yang populer. Anda bisa mempelajarinya di modul Tools & Platform.';
+      }
+
+      // Gratitude responses
+      if (text.includes('terima kasih') || text.includes('makasih') || text.includes('thanks')) {
+        return 'Sama-sama! 😊 Semoga informasi yang saya berikan bermanfaat untuk perjalanan trading Anda. Jika ada pertanyaan lain, jangan ragu untuk bertanya kapan saja!';
+      }
+
+      // Help responses
+      if (text.includes('bantuan') || text.includes('help') || text.includes('perintah') || text.includes('command')) {
+        return `🤖 **Panduan Lengkap MKG Capital Group:**
+
+**📚 PEMBELAJARAN:**
+• Ketik "materi" - Modul pembelajaran lengkap
+• Ketik "quiz" - Test pengetahuan trading
+• Ketik "fundamental" - Analisis fundamental
+• Ketik "teknikal" - Analisis teknikal
+• Ketik "candlestick" - Pola candlestick
+• Ketik "risiko" - Manajemen risiko
+• Ketik "psikologi" - Psikologi trading
+
+**💰 TRADING DASAR:**
+• Ketik "modal" - Kebutuhan modal minimal
+• Ketik "broker" - Rekomendasi broker
+• Ketik "jam trading" - Waktu trading pasar
+• Ketik "trend" - Memahami trend
+• Ketik "scalping" - Style trading
+
+**👥 KOMUNITAS & LAYANAN:**
+• Ketik "komunitas" - Bergabung komunitas
+• Ketik "strategi" - Strategi trading
+• Ketik "tools" - Tools & platform
+
+💡 **Tips:** Gunakan kata kunci di atas atau tanyakan apa saja tentang trading!`;
+      }
+
+      // Default response with more helpful suggestions
+      return `🤔 Maaf, saya belum mengerti pertanyaan Anda dengan sempurna.
+
+💡 **Coba gunakan kata kunci berikut:**
+• **Dasar Trading:** "apa itu trading", "cara mulai", "modal"
+• **Analisis:** "teknikal", "fundamental", "candlestick", "trend"
+• **Risiko:** "stop loss", "risk management", "psikologi"
+• **Market:** "jam trading", "broker", "platform"
+• **Lainnya:** "materi", "quiz", "komunitas", "bantuan"
+
+Atau tanyakan pertanyaan spesifik tentang trading yang ingin Anda ketahui! 🚀`;
+    }
+
+    chatForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userText = userInput.value.trim();
+      if (!userText) return;
+      appendMessage(userText, 'user-message');
+      userInput.value = '';
+      setTimeout(() => {
+        const response = botResponse(userText);
+        appendMessage(response, 'bot-message');
+      }, 500);
+    });
+
+    // Hamburger Menu Functionality
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const popupMenu = document.getElementById('popup-menu');
+    const closePopupMenu = document.getElementById('close-popup-menu');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Toggle hamburger menu
+    hamburgerMenu.addEventListener('click', function() {
+      hamburgerMenu.classList.toggle('open');
+      popupMenu.classList.toggle('show');
+    });
+
+    // Close popup menu
+    closePopupMenu.addEventListener('click', function() {
+      hamburgerMenu.classList.remove('open');
+      popupMenu.classList.remove('show');
+    });
+
+    // Close popup when clicking outside
+    popupMenu.addEventListener('click', function(e) {
+      if (e.target === popupMenu) {
+        hamburgerMenu.classList.remove('open');
+        popupMenu.classList.remove('show');
+      }
+    });
+
+    // Handle menu item clicks
+    menuItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const page = this.getAttribute('data-page');
+        if (page) {
+          window.location.href = page;
+        }
+      });
+    });
+
+    // Floating Chatbot Toggle Functionality
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const body = document.body;
+    let isMinimized = false;
+
+    // Function to toggle chatbot
+    function toggleChatbot() {
+      isMinimized = !isMinimized;
+      if (isMinimized) {
+        body.classList.add('chatbot-minimized');
+        chatbotToggle.textContent = '+';
+        chatbotToggle.title = 'Maximize Chatbot';
+      } else {
+        body.classList.remove('chatbot-minimized');
+        chatbotToggle.textContent = '−';
+        chatbotToggle.title = 'Minimize Chatbot';
+      }
+    }
+
+    // Add click event to toggle button
+    chatbotToggle.addEventListener('click', toggleChatbot);
+
+    // Show toggle button after a delay
+    setTimeout(() => {
+      chatbotToggle.style.display = 'flex';
+    }, 2000);
+
+    // Quick Access Popup Functionality
+    const openTipsBtn = document.getElementById('open-tips');
+    const openBrokerBtn = document.getElementById('open-broker');
+    const openPsikologiBtn = document.getElementById('open-psikologi');
+    const openPanduanBtn = document.getElementById('open-panduan');
+
+    const popupTips = document.getElementById('popup-tips');
+    const popupBroker = document.getElementById('popup-broker');
+    const popupPsikologi = document.getElementById('popup-psikologi');
+    const popupPanduan = document.getElementById('popup-panduan');
+
+    const closeTipsBtn = document.getElementById('close-popup-tips');
+    const closeBrokerBtn = document.getElementById('close-popup-broker');
+    const closePsikologiBtn = document.getElementById('close-popup-psikologi');
+    const closePanduanBtn = document.getElementById('close-popup-panduan');
+
+    // Open popup functions
+    function openTipsPopup() {
+      popupTips.classList.add('show');
+    }
+
+    function openBrokerPopup() {
+      popupBroker.classList.add('show');
+    }
+
+    function openPsikologiPopup() {
+      popupPsikologi.classList.add('show');
+    }
+
+    function openPanduanPopup() {
+      popupPanduan.classList.add('show');
+    }
+
+    // Close popup functions
+    function closeTipsPopup() {
+      popupTips.classList.remove('show');
+    }
+
+    function closeBrokerPopup() {
+      popupBroker.classList.remove('show');
+    }
+
+    function closePsikologiPopup() {
+      popupPsikologi.classList.remove('show');
+    }
+
+    function closePanduanPopup() {
+      popupPanduan.classList.remove('show');
+    }
+
+    // Add event listeners for opening popups
+    openTipsBtn.addEventListener('click', openTipsPopup);
+    openBrokerBtn.addEventListener('click', openBrokerPopup);
+    openPsikologiBtn.addEventListener('click', openPsikologiPopup);
+
+    // Add event listeners for closing popups
+    closeTipsBtn.addEventListener('click', closeTipsPopup);
+    closeBrokerBtn.addEventListener('click', closeBrokerPopup);
+    closePsikologiBtn.addEventListener('click', closePsikologiPopup);
+
+    // Close popups when clicking outside
+    popupTips.addEventListener('click', function(e) {
+      if (e.target === popupTips) {
+        closeTipsPopup();
+      }
+    });
+
+    popupBroker.addEventListener('click', function(e) {
+      if (e.target === popupBroker) {
+        closeBrokerPopup();
+      }
+    });
+
+    popupPsikologi.addEventListener('click', function(e) {
+      if (e.target === popupPsikologi) {
+        closePsikologiPopup();
+      }
+    });
+  </script>
+
+  <script>
+    // Advanced JavaScript animations for chatbot messages and UI
+
+    // Animate new messages with a bounce and fade-in effect
+    function animateMessageBounce(messageElement) {
+      messageElement.style.opacity = 0;
+      messageElement.style.transform = 'translateY(30px) scale(0.8)';
+      messageElement.style.transition = 'none';
+
+      requestAnimationFrame(() => {
+        messageElement.style.transition = 'transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.6s ease';
+        messageElement.style.opacity = 1;
+        messageElement.style.transform = 'translateY(0) scale(1)';
+      });
+    }
+
+    // Animate typing indicator with a pulsing dots effect
+    function createTypingIndicator() {
+      const typingIndicator = document.createElement('div');
+      typingIndicator.className = 'typing-indicator';
+      typingIndicator.textContent = 'Sedang mengetik';
+
+      const dots = document.createElement('span');
+      dots.className = 'typing-dots';
+      typingIndicator.appendChild(dots);
+
+      let dotCount = 0;
+      const maxDots = 3;
+      const interval = setInterval(() => {
+        dotCount = (dotCount + 1) % (maxDots + 1);
+        dots.textContent = '.'.repeat(dotCount);
+      }, 500);
+
+      typingIndicator.cleanup = () => clearInterval(interval);
+
+      return typingIndicator;
+    }
+
+    // Append message with animation and optional typing indicator
+    function appendMessageAnimated(text, className, isWelcome = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'message ' + className;
+
+      if (isWelcome) {
+        messageDiv.classList.add('welcome-message');
+      }
+
+      // Add icon based on message type
+      const iconSpan = document.createElement('span');
+      iconSpan.className = 'message-icon';
+      if (className === 'user-message') {
+        iconSpan.textContent = '👤';
+      } else if (className === 'bot-message') {
+        if (isWelcome) {
+          iconSpan.className = 'welcome-icon';
+          iconSpan.textContent = '🚀';
+        } else {
+          iconSpan.textContent = '🤖';
+        }
+      }
+      messageDiv.appendChild(iconSpan);
+
+      // Add text content
+      const textSpan = document.createElement('span');
+      if (isWelcome) {
+        textSpan.className = 'typing-effect';
+        typeWriter(textSpan, text, 0);
+      } else {
+        textSpan.textContent = text;
+      }
+      messageDiv.appendChild(textSpan);
+
+      // Add features list for welcome message
+      if (isWelcome) {
+        const featuresList = document.createElement('ul');
+        featuresList.className = 'welcome-features';
+
+        const features = [
+          { icon: '📚', text: 'Materi Pembelajaran Lengkap' },
+          { icon: '🎯', text: 'Quiz Interaktif' },
+          { icon: '👥', text: 'Komunitas Trader Pro' },
+          { icon: '📈', text: 'Strategi Trading Modern' },
+          { icon: '🛠️', text: 'Tools & Platform Terbaik' },
+          { icon: '💬', text: 'Bantuan 24/7' }
+        ];
+
+        features.forEach(feature => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span class="feature-icon">${feature.icon}</span>${feature.text}`;
+          featuresList.appendChild(li);
+        });
+
+        messageDiv.appendChild(featuresList);
+
+        // Add CTA section
+        const ctaDiv = document.createElement('div');
+        ctaDiv.className = 'welcome-cta';
+        ctaDiv.innerHTML = `
+          <strong>💡 Tips:</strong> Mulai dengan mengetik "materi" untuk melihat modul pembelajaran,
+          atau "quiz" untuk menguji pengetahuan Anda!
+        `;
+        messageDiv.appendChild(ctaDiv);
+      }
+
+      chatWindow.appendChild(messageDiv);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+
+      // Animate the message with bounce effect
+      animateMessageBounce(messageDiv);
+    }
+
+    // Override existing appendMessage to use animated version
+    appendMessage = appendMessageAnimated;
+
+    // Example: Show typing indicator before bot response
+    chatForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userText = userInput.value.trim();
+      if (!userText) return;
+      appendMessage(userText, 'user-message');
+      userInput.value = '';
+
+      // Show typing indicator
+      const typingIndicator = createTypingIndicator();
+      chatWindow.appendChild(typingIndicator);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+
+      setTimeout(() => {
+        // Remove typing indicator
+        typingIndicator.cleanup();
+        chatWindow.removeChild(typingIndicator);
+
+        const response = botResponse(userText);
+        appendMessage(response, 'bot-message');
+      }, 1500);
+    });
+  </script>
+  <script src="page-animations.js"></script>
+</body>
+</html>

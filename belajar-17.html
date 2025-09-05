@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materi Pembelajaran 17 - MKG Capital Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="learning-styles.css" />
+</head>
+<body class="belajar-page">
+
+  <header>
+    <div class="container">
+      <h1>MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none;">
+          <button class="nav-btn" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn active" data-page="belajar-17.html">Materi Pembelajaran</button>
+          <button class="nav-btn" data-page="quiz-1.html">Quiz</button>
+          <button class="nav-btn" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Learning Hero Section -->
+  <section class="learning-hero">
+    <div class="container">
+      <div class="learning-hero-content">
+        <h1 class="learning-title">Fibonacci Retracement</h1>
+        <p class="learning-subtitle">Materi Pembelajaran 17</p>
+        <p class="learning-description">
+          Pelajari alat Fibonacci Retracement yang menggunakan rasio matematika untuk mengidentifikasi level support dan resistance potensial dalam retracement harga.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Progress Section -->
+    <div class="progress-container">
+      <div class="progress-header">
+        <div class="progress-title">Progres Pembelajaran</div>
+        <div class="progress-percentage">0%</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Introduction Card -->
+    <div class="content-section">
+      <span class="section-icon">🎯</span>
+      <h2 class="section-title">Pengantar Fibonacci Retracement</h2>
+      <div class="section-content">
+        <p>Fibonacci Retracement adalah alat analisis teknikal yang menggunakan rasio matematika dari urutan Fibonacci untuk mengidentifikasi level-level potensial dimana harga kemungkinan akan mengalami retracement (koreksi) sebelum melanjutkan tren utamanya.</p>
+        <p>Konsep ini didasarkan pada penemuan matematikawan Italia Leonardo Fibonacci pada abad ke-13. Rasio-rasio ini sering muncul secara alami dalam berbagai aspek kehidupan, termasuk pergerakan harga di pasar keuangan.</p>
+      </div>
+    </div>
+
+    <!-- Fibonacci Sequence Card -->
+    <div class="content-section">
+      <span class="section-icon">🔢</span>
+      <h2 class="section-title">Urutan Fibonacci dan Rasio</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>📊 Urutan Fibonacci</h3>
+          <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987...</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Golden Ratio (1.618)</div>
+            <div class="list-item-description">Rasio antara dua angka consecutive yang lebih besar (21/13 = 1.615, 34/21 = 1.619)</div>
+          </li>
+          <li>
+            <div class="list-item-title">Golden Ratio Conjugate (0.618)</div>
+            <div class="list-item-description">Kebalikan dari golden ratio (1/1.618 = 0.618)</div>
+          </li>
+          <li>
+            <div class="list-item-title">0.382 Ratio</div>
+            <div class="list-item-description">Rasio antara angka yang terpisah satu (21/55 = 0.382)</div>
+          </li>
+          <li>
+            <div class="list-item-title">0.236 Ratio</div>
+            <div class="list-item-description">Rasio antara angka yang terpisah dua (13/55 = 0.236)</div>
+          </li>
+          <li>
+            <div class="list-item-title">0.786 Ratio</div>
+            <div class="list-item-description">Square root of 0.618 (√0.618 = 0.786)</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- How to Draw Fib Levels Card -->
+    <div class="content-section">
+      <span class="section-icon">📐</span>
+      <h2 class="section-title">Cara Menggambar Level Fibonacci</h2>
+      <div class="section-content">
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Identifikasi Swing Points</div>
+            <div class="list-item-description">Temukan titik tertinggi (high) dan terendah (low) yang signifikan dalam tren.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Draw the Tool</div>
+            <div class="list-item-description">Klik pada low point, lalu drag ke high point untuk uptrend. Sebaliknya untuk downtrend.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Uptrend Fib</div>
+            <div class="list-item-description">Low ke high: 0% di low, 100% di high, retracement levels di antaranya.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Downtrend Fib</div>
+            <div class="list-item-description">High ke low: 0% di high, 100% di low, retracement levels di antaranya.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Multiple Timeframes</div>
+            <div class="list-item-description">Gunakan timeframe yang lebih tinggi untuk menggambar Fib yang lebih signifikan.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Common Fib Levels Card -->
+    <div class="content-section">
+      <span class="section-icon">📈</span>
+      <h2 class="section-title">Level Fibonacci yang Umum</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>🎯 Level Penting</h3>
+          <p>Beberapa level Fib lebih sering bertindak sebagai support/resistance daripada yang lain.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">23.6% Level</div>
+            <div class="list-item-description">Level retracement pertama, sering diabaikan oleh banyak trader.</div>
+          </li>
+          <li>
+            <div class="list-item-title">38.2% Level</div>
+            <div class="list-item-description">Level moderat, sering menjadi area konsolidasi sebelum melanjutkan tren.</div>
+          </li>
+          <li>
+            <div class="list-item-title">50.0% Level</div>
+            <div class="list-item-description">Bukan Fib murni, tapi sering bertindak sebagai support/resistance psikologis.</div>
+          </li>
+          <li>
+            <div class="list-item-title">61.8% Level</div>
+            <div class="list-item-description">Golden ratio, level terkuat dan paling sering di-watch oleh trader.</div>
+          </li>
+          <li>
+            <div class="list-item-title">78.6% Level</div>
+            <div class="list-item-description">Level dalam, sering menandai reversal atau continuation yang kuat.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trading with Fib Card -->
+    <div class="content-section">
+      <span class="section-icon">🎯</span>
+      <h2 class="section-title">Trading dengan Fibonacci Retracement</h2>
+      <div class="section-content">
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Support at Fib Levels</div>
+            <div class="list-item-description">Dalam uptrend, Fib levels bertindak sebagai support untuk retracement.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Resistance at Fib Levels</div>
+            <div class="list-item-description">Dalam downtrend, Fib levels bertindak sebagai resistance untuk retracement.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Entry Points</div>
+            <div class="list-item-description">Masuk pada konfirmasi di Fib level dengan candle pattern atau indikator lain.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Stop Loss</div>
+            <div class="list-item-description">Tempatkan di bawah Fib level untuk long, di atas untuk short.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Take Profit</div>
+            <div class="list-item-description">Targetkan Fib level berikutnya atau berdasarkan risk-reward ratio.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Combining with Other Tools Card -->
+    <div class="content-section">
+      <span class="section-icon">🔧</span>
+      <h2 class="section-title">Menggabungkan dengan Alat Lain</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>⚡ Konfirmasi</h3>
+          <p>Fibonacci lebih powerful ketika dikombinasikan dengan indikator atau tools lain.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Trend Lines</div>
+            <div class="list-item-description">Fib level yang berhimpit dengan trend line memiliki probabilitas lebih tinggi.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Moving Averages</div>
+            <div class="list-item-description">Konfirmasi dengan MA 50/200 yang berhimpit dengan Fib level.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Support/Resistance</div>
+            <div class="list-item-description">Fib level yang coincide dengan S/R horizontal lebih signifikan.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Candlestick Patterns</div>
+            <div class="list-item-description">Gunakan pin bar, engulfing, atau doji di Fib level sebagai konfirmasi entry.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Volume</div>
+            <div class="list-item-description">Volume yang tinggi di Fib level menunjukkan kekuatan level tersebut.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="learning-navigation">
+      <div class="nav-buttons">
+        <button class="btn-primary" id="open-popup-quiz">
+          <span style="margin-right: 8px;">📝</span>
+          Kerjakan Quiz
+        </button>
+      </div>
+      <nav class="pagination">
+        <a href="belajar-16.html">&laquo; Materi Sebelumnya</a> |
+        <a href="belajar-18.html">Materi Berikutnya &raquo;</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-members">&times;</span>
+      <h3>Anggota MKG Capital Group</h3>
+      <ul>
+        <li>Awen</li>
+        <li>Yongki</li>
+        <li>Reno</li>
+        <li>Deo</li>
+        <li>Noven</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup Materi Pembelajaran -->
+  <div id="popup-learning" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-learning">&times;</span>
+      <h3>Materi Pembelajaran</h3>
+      <p>Anda sedang membaca Materi 17: Fibonacci Retracement.</p>
+    </div>
+  </div>
+
+  <!-- Popup Quiz -->
+  <div id="popup-quiz" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-quiz">&times;</span>
+      <h3>Quiz Fibonacci Retracement</h3>
+
+      <form class="quiz-form">
+        <div class="question">
+          <p>1. Siapa yang menemukan urutan Fibonacci?</p>
+          <label><input type="radio" name="q1" data-correct="true" /> Leonardo Fibonacci</label><br />
+          <label><input type="radio" name="q1" /> Isaac Newton</label><br />
+          <label><input type="radio" name="q1" /> Albert Einstein</label><br />
+        </div>
+
+        <div class="question">
+          <p>2. Apa Golden Ratio dalam Fibonacci?</p>
+          <label><input type="radio" name="q2" /> 0.382</label><br />
+          <label><input type="radio" name="q2" data-correct="true" /> 1.618</label><br />
+          <label><input type="radio" name="q2" /> 0.236</label><br />
+        </div>
+
+        <div class="question">
+          <p>3. Level Fib mana yang paling signifikan?</p>
+          <label><input type="radio" name="q3" /> 23.6%</label><br />
+          <label><input type="radio" name="q3" data-correct="true" /> 61.8%</label><br />
+          <label><input type="radio" name="q3" /> 78.6%</label><br />
+        </div>
+
+        <div class="question">
+          <p>4. Bagaimana menggambar Fib di uptrend?</p>
+          <label><input type="radio" name="q4" data-correct="true" /> Dari low ke high</label><br />
+          <label><input type="radio" name="q4" /> Dari high ke low</label><br />
+          <label><input type="radio" name="q4" /> Acak</label><br />
+        </div>
+
+        <div class="question">
+          <p>5. Fib level 50% termasuk Fib murni?</p>
+          <label><input type="radio" name="q5" data-correct="true" /> Tidak</label><br />
+          <label><input type="radio" name="q5" /> Ya</label><br />
+          <label><input type="radio" name="q5" /> Kadang-kadang</label><br />
+        </div>
+
+        <div class="question">
+          <p>6. Fib lebih reliable ketika?</p>
+          <label><input type="radio" name="q6" /> Sendiri saja</label><br />
+          <label><input type="radio" name="q6" data-correct="true" /> Dikombinasikan dengan tools lain</label><br />
+          <label><input type="radio" name="q6" /> Di timeframe rendah</label><br />
+        </div>
+
+        <div class="question">
+          <p>7. Stop loss untuk long di Fib level?</p>
+          <label><input type="radio" name="q7" /> Di atas level</label><br />
+          <label><input type="radio" name="q7" data-correct="true" /> Di bawah level</label><br />
+          <label><input type="radio" name="q7" /> Di tengah level</label><br />
+        </div>
+
+        <div class="question">
+          <p>8. Fib level 0.786 adalah?</p>
+          <label><input type="radio" name="q8" /> Golden ratio</label><br />
+          <label><input type="radio" name="q8" data-correct="true" /> Square root of 0.618</label><br />
+          <label><input type="radio" name="q8" /> Kebalikan golden ratio</label><br />
+        </div>
+
+        <div class="question">
+          <p>9. Fib retracement digunakan untuk?</p>
+          <label><input type="radio" name="q9" /> Mengukur trend</label><br />
+          <label><input type="radio" name="q9" data-correct="true" /> Mengidentifikasi retracement levels</label><br />
+          <label><input type="radio" name="q9" /> Menghitung volume</label><br />
+        </div>
+
+        <div class="question">
+          <p>10. Level Fib mana yang sering diabaikan?</p>
+          <label><input type="radio" name="q10" data-correct="true" /> 23.6%</label><br />
+          <label><input type="radio" name="q10" /> 61.8%</label><br />
+          <label><input type="radio" name="q10" /> 38.2%</label><br />
+        </div>
+
+        <button type="submit">Kirim Jawaban</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script-updated.js"></script>
+  <script src="script.js"></script>
+  <script src="hamburger-menu.js"></script>
+
+  <!-- Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <button class="hamburger-close-btn" id="hamburger-close-btn">&times;</button>
+      <div class="hamburger-nav-buttons">
+        <button class="hamburger-nav-btn" data-page="index.html">Beranda</button>
+        <button class="hamburger-nav-btn" data-page="about.html">Tentang Kami</button>
+        <button class="hamburger-nav-btn active" data-page="belajar-17.html">Materi Pembelajaran</button>
+        <button class="hamburger-nav-btn" data-page="quiz-1.html">Quiz</button>
+        <button class="hamburger-nav-btn" data-page="contact.html">Kontak</button>
+        <button class="hamburger-nav-btn" id="hamburger-open-popup-members">Anggota Grup</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

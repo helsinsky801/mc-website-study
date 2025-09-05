@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materi Pembelajaran 20 - MKG Capital Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="learning-styles.css" />
+</head>
+<body class="belajar-page">
+
+  <header>
+    <div class="container">
+      <h1>MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none;">
+          <button class="nav-btn" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn active" data-page="belajar-20.html">Materi Pembelajaran</button>
+          <button class="nav-btn" data-page="quiz-1.html">Quiz</button>
+          <button class="nav-btn" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Learning Hero Section -->
+  <section class="learning-hero">
+    <div class="container">
+      <div class="learning-hero-content">
+        <h1 class="learning-title">MACD (Moving Average Convergence Divergence)</h1>
+        <p class="learning-subtitle">Materi Pembelajaran 20</p>
+        <p class="learning-description">
+          Pelajari indikator momentum MACD yang menunjukkan hubungan antara dua moving averages untuk mengidentifikasi perubahan momentum dan tren.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Progress Section -->
+    <div class="progress-container">
+      <div class="progress-header">
+        <div class="progress-title">Progres Pembelajaran</div>
+        <div class="progress-percentage">0%</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Introduction Card -->
+    <div class="content-section">
+      <span class="section-icon">🎯</span>
+      <h2 class="section-title">Pengantar MACD</h2>
+      <div class="section-content">
+        <p>MACD (Moving Average Convergence Divergence) adalah indikator momentum yang dikembangkan oleh Gerald Appel pada tahun 1970-an. Indikator ini menunjukkan hubungan antara dua exponential moving averages (EMA) dari harga suatu aset. MACD digunakan untuk mengidentifikasi perubahan momentum, kekuatan tren, dan potensi reversal.</p>
+        <p>MACD bekerja dengan menghitung perbedaan antara EMA 26-periode dan EMA 12-periode, kemudian menambahkan EMA 9-periode sebagai signal line. Konvergensi dan divergensi antara garis-garis ini memberikan sinyal trading yang berharga.</p>
+      </div>
+    </div>
+
+    <!-- How MACD is Calculated Card -->
+    <div class="content-section">
+      <span class="section-icon">🔢</span>
+      <h2 class="section-title">Cara Menghitung MACD</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>📊 Komponen MACD</h3>
+          <p>MACD terdiri dari tiga komponen utama yang bekerja bersama-sama.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">MACD Line</div>
+            <div class="list-item-description">MACD = EMA(12) - EMA(26)</div>
+          </li>
+          <li>
+            <div class="list-item-title">Signal Line</div>
+            <div class="list-item-description">EMA(9) dari MACD Line</div>
+          </li>
+          <li>
+            <div class="list-item-title">Histogram</div>
+            <div class="list-item-description">MACD Line - Signal Line</div>
+          </li>
+          <li>
+            <div class="list-item-title">Default Settings</div>
+            <div class="list-item-description">12, 26, 9 adalah setting default yang paling populer.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Customization</div>
+            <div class="list-item-description">Setting dapat disesuaikan berdasarkan timeframe dan instrumen trading.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MACD Components Card -->
+    <div class="content-section">
+      <span class="section-icon">📊</span>
+      <h2 class="section-title">Komponen MACD</h2>
+      <div class="section-content">
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">MACD Line (Biru)</div>
+            <div class="list-item-description">Garis utama yang menunjukkan momentum. Di atas 0 = bullish, di bawah 0 = bearish.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Signal Line (Merah)</div>
+            <div class="list-item-description">EMA dari MACD line, digunakan untuk generate sinyal crossover.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Histogram</div>
+            <div class="list-item-description">Bar yang menunjukkan perbedaan antara MACD dan signal line. Positif = bullish, negatif = bearish.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Zero Line</div>
+            <div class="list-item-description">Level 0 sebagai pembatas antara momentum bullish dan bearish.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Center Line Crossovers</div>
+            <div class="list-item-description">Ketika MACD line cross zero line, menandai perubahan momentum utama.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MACD Signals Card -->
+    <div class="content-section">
+      <span class="section-icon">📈</span>
+      <h2 class="section-title">Sinyal MACD</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>⚡ Sinyal Trading</h3>
+          <p>MACD memberikan berbagai sinyal yang dapat digunakan untuk entry dan exit.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Signal Line Crossovers</div>
+            <div class="list-item-description">MACD cross signal line ke atas = buy signal, ke bawah = sell signal.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Center Line Crossovers</div>
+            <div class="list-item-description">MACD cross zero line ke atas = tren bullish dimulai, ke bawah = tren bearish dimulai.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Divergence</div>
+            <div class="list-item-description">MACD membuat high/low berbeda dengan harga, menandai potensi reversal.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Histogram Changes</div>
+            <div class="list-item-description">Perubahan arah histogram menunjukkan perubahan momentum.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Overbought/Oversold</div>
+            <div class="list-item-description">MACD yang terlalu jauh dari zero line menunjukkan kondisi ekstrem.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trading with MACD Card -->
+    <div class="content-section">
+      <span class="section-icon">🎯</span>
+      <h2 class="section-title">Trading dengan MACD</h2>
+      <div class="section-content">
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Trend Following</div>
+            <div class="list-item-description">Gunakan MACD untuk mengkonfirmasi arah tren yang sedang berlangsung.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Entry Signals</div>
+            <div class="list-item-description">Masuk trade pada konfirmasi crossover dengan volume dan price action.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Exit Signals</div>
+            <div class="list-item-description">Keluar trade ketika MACD memberikan sinyal reversal.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Risk Management</div>
+            <div class="list-item-description">Tempatkan stop loss di swing low/high terdekat atau berdasarkan ATR.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Multiple Timeframe</div>
+            <div class="list-item-description">Konfirmasi sinyal MACD di timeframe yang lebih tinggi untuk akurasi lebih baik.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MACD Histogram Card -->
+    <div class="content-section">
+      <span class="section-icon">📊</span>
+      <h2 class="section-title">MACD Histogram</h2>
+      <div class="section-content">
+        <div class="highlight-box">
+          <h3>📈 Interpretasi Histogram</h3>
+          <p>Histogram memberikan informasi visual tentang momentum dan kekuatan tren.</p>
+        </div>
+        <ul class="content-list">
+          <li>
+            <div class="list-item-title">Positive Histogram</div>
+            <div class="list-item-description">Bar di atas zero line menunjukkan momentum bullish yang meningkat.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Negative Histogram</div>
+            <div class="list-item-description">Bar di bawah zero line menunjukkan momentum bearish yang meningkat.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Histogram Shrinking</div>
+            <div class="list-item-description">Bar yang semakin kecil menunjukkan momentum yang melemah.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Histogram Growing</div>
+            <div class="list-item-description">Bar yang semakin besar menunjukkan momentum yang menguat.</div>
+          </li>
+          <li>
+            <div class="list-item-title">Zero Line Cross</div>
+            <div class="list-item-description">Histogram cross zero line menandai perubahan momentum utama.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="learning-navigation">
+      <div class="nav-buttons">
+        <button class="btn-primary" id="open-popup-quiz">
+          <span style="margin-right: 8px;">📝</span>
+          Kerjakan Quiz
+        </button>
+      </div>
+      <nav class="pagination">
+        <a href="belajar-19.html">&laquo; Materi Sebelumnya</a> |
+        <a href="belajar-21.html">Materi Berikutnya &raquo;</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-members">&times;</span>
+      <h3>Anggota MKG Capital Group</h3>
+      <ul>
+        <li>Awen</li>
+        <li>Yongki</li>
+        <li>Reno</li>
+        <li>Deo</li>
+        <li>Noven</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup Materi Pembelajaran -->
+  <div id="popup-learning" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-learning">&times;</span>
+      <h3>Materi Pembelajaran</h3>
+      <p>Anda sedang membaca Materi 20: MACD (Moving Average Convergence Divergence).</p>
+    </div>
+  </div>
+
+  <!-- Popup Quiz -->
+  <div id="popup-quiz" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-quiz">&times;</span>
+      <h3>Quiz MACD (Moving Average Convergence Divergence)</h3>
+
+      <form class="quiz-form">
+        <div class="question">
+          <p>1. MACD adalah indikator?</p>
+          <label><input type="radio" name="q1" data-correct="true" /> Momentum</label><br />
+          <label><input type="radio" name="q1" /> Trend</label><br />
+          <label><input type="radio" name="q1" /> Volume</label><br />
+        </div>
+
+        <div class="question">
+          <p>2. Siapa yang mengembangkan MACD?</p>
+          <label><input type="radio" name="q2" /> J. Welles Wilder</label><br />
+          <label><input type="radio" name="q2" data-correct="true" /> Gerald Appel</label><br />
+          <label><input type="radio" name="q2" /> Steve Nison</label><br />
+        </div>
+
+        <div class="question">
+          <p>3. Setting default MACD?</p>
+          <label><input type="radio" name="q3" /> 5, 13, 5</label><br />
+          <label><input type="radio" name="q3" data-correct="true" /> 12, 26, 9</label><br />
+          <label><input type="radio" name="q3" /> 20, 50, 10</label><br />
+        </div>
+
+        <div class="question">
+          <p>4. MACD line adalah?</p>
+          <label><input type="radio" name="q4" data-correct="true" /> EMA 12 - EMA 26</label><br />
+          <label><input type="radio" name="q4" /> EMA 26 - EMA 12</label><br />
+          <label><input type="radio" name="q4" /> EMA 12 + EMA 26</label><br />
+        </div>
+
+        <div class="question">
+          <p>5. Signal line adalah?</p>
+          <label><input type="radio" name="q5" /> EMA 12 dari harga</label><br />
+          <label><input type="radio" name="q5" data-correct="true" /> EMA 9 dari MACD line</label><br />
+          <label><input type="radio" name="q5" /> EMA 26 dari harga</label><br />
+        </div>
+
+        <div class="question">
+          <p>6. MACD cross signal line ke atas?</p>
+          <label><input type="radio" name="q6" /> Sell signal</label><br />
+          <label><input type="radio" name="q6" data-correct="true" /> Buy signal</label><br />
+          <label><input type="radio" name="q6" /> No signal</label><br />
+        </div>
+
+        <div class="question">
+          <p>7. Histogram menunjukkan?</p>
+          <label><input type="radio" name="q7" /> Volume</label><br />
+          <label><input type="radio" name="q7" data-correct="true" /> Perbedaan MACD dan signal line</label><br />
+          <label><input type="radio" name="q7" /> Trend direction</label><br />
+        </div>
+
+        <div class="question">
+          <p>8. MACD di atas zero line?</p>
+          <label><input type="radio" name="q8" /> Bearish</label><br />
+          <label><input type="radio" name="q8" data-correct="true" /> Bullish</label><br />
+          <label><input type="radio" name="q8" /> Neutral</label><br />
+        </div>
+
+        <div class="question">
+          <p>9. Center line crossover menandakan?</p>
+          <label><input type="radio" name="q9" /> Entry point</label><br />
+          <label><input type="radio" name="q9" data-correct="true" /> Perubahan momentum utama</label><br />
+          <label><input type="radio" name="q9" /> Exit point</label><br />
+        </div>
+
+        <div class="question">
+          <p>10. MACD terbaik digunakan untuk?</p>
+          <label><input type="radio" name="q10" /> Price prediction</label><br />
+          <label><input type="radio" name="q10" data-correct="true" /> Momentum analysis</label><br />
+          <label><input type="radio" name="q10" /> Volume analysis</label><br />
+        </div>
+
+        <button type="submit">Kirim Jawaban</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script-updated.js"></script>
+  <script src="script.js"></script>
+  <script src="hamburger-menu.js"></script>
+
+  <!-- Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <button class="hamburger-close-btn" id="hamburger-close-btn">&times;</button>
+      <div class="hamburger-nav-buttons">
+        <button class="hamburger-nav-btn" data-page="index.html">Beranda</button>
+        <button class="hamburger-nav-btn" data-page="about.html">Tentang Kami</button>
+        <button class="hamburger-nav-btn active" data-page="belajar-20.html">Materi Pembelajaran</button>
+        <button class="hamburger-nav-btn" data-page="quiz-1.html">Quiz</button>
+        <button class="hamburger-nav-btn" data-page="contact.html">Kontak</button>
+        <button class="hamburger-nav-btn" id="hamburger-open-popup-members">Anggota Grup</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

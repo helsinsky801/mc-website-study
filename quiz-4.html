@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz 4 - MKG Capital Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>MKG Capital Group</h1>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons-container" style="display:none;">
+          <button class="nav-btn" data-page="index.html">Beranda</button>
+          <button class="nav-btn" data-page="about.html">Tentang Kami</button>
+          <button class="nav-btn" data-page="belajar-1.html">Materi Pembelajaran</button>
+          <button class="nav-btn active" data-page="quiz-4.html">Quiz</button>
+          <button class="nav-btn" data-page="contact.html">Kontak</button>
+          <button class="nav-btn" id="open-popup-members">Anggota Grup</button>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Quiz 4: Pola Grafik</h2>
+
+      <form class="quiz-form">
+        <div class="question">
+          <p>1. Apa yang dimaksud dengan pola grafik?</p>
+          <label><input type="radio" name="q1" data-correct="true" /> Formasi harga yang dapat memprediksi pergerakan masa depan</label><br />
+          <label><input type="radio" name="q1" /> Garis lurus di chart</label><br />
+          <label><input type="radio" name="q1" /> Indikator teknikal</label><br />
+        </div>
+
+        <div class="question">
+          <p>2. Pola Head & Shoulders termasuk jenis pola apa?</p>
+          <label><input type="radio" name="q2" /> Continuation pattern</label><br />
+          <label><input type="radio" name="q2" data-correct="true" /> Reversal pattern</label><br />
+          <label><input type="radio" name="q2" /> Breakout pattern</label><br />
+        </div>
+
+        <div class="question">
+          <p>3. Apa ciri utama pola Triangle?</p>
+          <label><input type="radio" name="q3" /> Garis support dan resistance sejajar</label><br />
+          <label><input type="radio" name="q3" data-correct="true" /> Garis support dan resistance menyempit</label><br />
+          <label><input type="radio" name="q3" /> Garis support dan resistance membentuk lingkaran</label><br />
+        </div>
+
+        <div class="question">
+          <p>4. Kapan breakout dianggap valid?</p>
+          <label><input type="radio" name="q4" /> Ketika harga menyentuh resistance</label><br />
+          <label><input type="radio" name="q4" data-correct="true" /> Ketika harga menembus dengan volume tinggi</label><br />
+          <label><input type="radio" name="q4" /> Ketika harga bergerak sideways</label><br />
+        </div>
+
+        <div class="question">
+          <p>5. Apa fungsi volume dalam konfirmasi pola?</p>
+          <label><input type="radio" name="q5" /> Menentukan warna candle</label><br />
+          <label><input type="radio" name="q5" data-correct="true" /> Mengkonfirmasi kekuatan breakout</label><br />
+          <label><input type="radio" name="q5" /> Mengubah arah tren</label><br />
+        </div>
+
+        <div class="question">
+          <p>6. Pola Double Top menandai?</p>
+          <label><input type="radio" name="q6" /> Kelanjutan tren naik</label><br />
+          <label><input type="radio" name="q6" data-correct="true" /> Pembalikan tren naik</label><br />
+          <label><input type="radio" name="q6" /> Pembalikan tren turun</label><br />
+        </div>
+
+        <div class="question">
+          <p>7. Apa perbedaan Flag dan Pennant?</p>
+          <label><input type="radio" name="q7" /> Flag lebih besar dari Pennant</label><br />
+          <label><input type="radio" name="q7" data-correct="true" /> Flag berbentuk paralellogram, Pennant berbentuk segitiga</label><br />
+          <label><input type="radio" name="q7" /> Flag untuk reversal, Pennant untuk continuation</label><br />
+        </div>
+
+        <div class="question">
+          <p>8. Target price untuk Head & Shoulders diukur dari?</p>
+          <label><input type="radio" name="q8" /> Head ke shoulder</label><br />
+          <label><input type="radio" name="q8" data-correct="true" /> Head ke neckline</label><br />
+          <label><input type="radio" name="q8" /> Shoulder ke neckline</label><br />
+        </div>
+
+        <div class="question">
+          <p>9. Pola Wedge biasanya menandai?</p>
+          <label><input type="radio" name="q9" /> Breakout yang kuat</label><br />
+          <label><input type="radio" name="q9" data-correct="true" /> Reversal atau continuation tergantung konteks</label><br />
+          <label><input type="radio" name="q9" /> Konsolidasi jangka panjang</label><br />
+        </div>
+
+        <div class="question">
+          <p>10. Mengapa volume penting pada saat breakout?</p>
+          <label><input type="radio" name="q10" /> Untuk menghitung profit</label><br />
+          <label><input type="radio" name="q10" data-correct="true" /> Untuk mengkonfirmasi kekuatan pergerakan</label><br />
+          <label><input type="radio" name="q10" /> Untuk menentukan timeframe</label><br />
+        </div>
+
+        <button type="submit">Kirim Jawaban</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MKG Capital Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Anggota Grup -->
+  <div id="popup-members" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup-members">&times;</span>
+      <h3>Anggota MKG Capital Group</h3>
+      <ul>
+        <li>Awen</li>
+        <li>Yongki</li>
+        <li>Reno</li>
+        <li>Deo</li>
+        <li>Noven</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hamburger Menu Popup -->
+  <div id="hamburger-popup" class="hamburger-popup">
+    <div class="hamburger-popup-content">
+      <button class="hamburger-close-btn" id="hamburger-close-btn">&times;</button>
+      <div class="hamburger-nav-buttons">
+        <button class="hamburger-nav-btn" data-page="index.html">Beranda</button>
+        <button class="hamburger-nav-btn" data-page="about.html">Tentang Kami</button>
+        <button class="hamburger-nav-btn" data-page="belajar-1.html">Materi Pembelajaran</button>
+        <button class="hamburger-nav-btn active" data-page="quiz-4.html">Quiz</button>
+        <button class="hamburger-nav-btn" data-page="contact.html">Kontak</button>
+        <button class="hamburger-nav-btn" id="hamburger-open-popup-members">Anggota Grup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="quiz-animations.js"></script>
+  <script src="hamburger-menu.js"></script>
+</body>
+</html>
